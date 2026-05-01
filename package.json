@@ -13,8 +13,10 @@
     "@nuxt/content": "latest",
     "@nuxt/image": "latest",
     "@nuxt/ui": "latest",
+    "@nuxtjs/i18n": "latest",
     "@nuxtjs/mdc": "latest",
     "better-sqlite3": "latest",
+    "nodemailer": "latest",
     "nuxt": "latest",
     "vue": "latest",
     "vue-router": "latest"
