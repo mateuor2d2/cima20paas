@@ -10,17 +10,17 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/content": "^3.5.1",
-    "@nuxt/image": "^1.10.0",
-    "@nuxt/ui": "^3.1.0",
-    "@nuxtjs/mdc": "^0.16.1",
-    "better-sqlite3": "^12.1.0",
-    "nuxt": "^3.16.0",
-    "vue": "^3.5.0",
-    "vue-router": "^4.5.0"
+    "@nuxt/content": "latest",
+    "@nuxt/image": "latest",
+    "@nuxt/ui": "latest",
+    "@nuxtjs/mdc": "latest",
+    "better-sqlite3": "latest",
+    "nuxt": "latest",
+    "vue": "latest",
+    "vue-router": "latest"
   },
   "devDependencies": {
-    "@types/node": "^22.0.0",
-    "typescript": "^5.7.0"
+    "@types/node": "latest",
+    "typescript": "latest"
   }
 }
