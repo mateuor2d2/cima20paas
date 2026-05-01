@@ -28,7 +28,7 @@ useSeoMeta({
     
     <UContainer class="py-12">
       <ContentPage v-if="homepage && !homepage.hero" :page="homepage" />
-      <ContentRenderer v-else-if="homepage" :value="homepage" />
+      <ContentRenderer v-else-if="homepage" :value="homepage" class="prose dark:prose-invert max-w-none" />
       
       <section v-if="latestPosts?.length" class="py-12">
         <h2 class="text-2xl font-bold mb-6">Últimas noticias</h2>
