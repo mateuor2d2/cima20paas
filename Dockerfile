@@ -54,4 +54,4 @@ ENV NUXT_HOST=0.0.0.0
 ENV NUXT_PORT=3001
 
 # Start the server
-CMD ["bun", ".output/server/index.mjs"]
+CMD ["bun", "run", ".output/server/index.mjs", "--port", "3001"]
