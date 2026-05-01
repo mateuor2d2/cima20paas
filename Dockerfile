@@ -11,7 +11,7 @@ RUN apk add --no-cache python3 make g++ gcc libc-dev
 COPY package.json bun.lock ./
 
 # Install dependencies
-RUN bun install --frozen-lockfile
+RUN bun install
 
 # Copy all source files
 COPY . .
