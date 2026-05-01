@@ -33,8 +33,8 @@ COPY --from=builder /app/.output ./.output
 # Copy node_modules for runtime dependencies (@nuxt/image needs ofetch)
 COPY --from=builder /app/node_modules ./node_modules
 
-# Create symlink from .output/server/node_modules to root node_modules
-RUN ln -sf /app/node_modules /app/.output/server/node_modules
+# Remove existing node_modules in .output/server and create symlink to root
+RUN rm -rf /app/.output/server/node_modules && ln -sf /app/node_modules /app/.output/server/node_modules
 
 # Copy package.json for reference
 COPY --from=builder /app/package.json ./
