@@ -46,12 +46,12 @@ RUN rm -rf /app/.output/server/node_modules && ln -sf /app/node_modules /app/.ou
 COPY --from=builder /app/package.json ./
 
 # Expose the port Nuxt runs on
-EXPOSE 3000
+EXPOSE 3001
 
 # Set environment
 ENV NODE_ENV=production
 ENV NUXT_HOST=0.0.0.0
-ENV NUXT_PORT=3000
+ENV NUXT_PORT=3001
 
 # Start the server
 CMD ["bun", ".output/server/index.mjs"]

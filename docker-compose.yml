@@ -20,13 +20,13 @@ services:
       - "traefik.http.routers.cima20paas.rule=Host(${DOMAIN:-cima20paas.cima20.com})"
       - "traefik.http.routers.cima20paas.entrypoints=websecure"
       - "traefik.http.routers.cima20paas.tls.certresolver=letsencrypt"
-      - "traefik.http.services.cima20paas.loadbalancer.server.port=3000"
+      - "traefik.http.services.cima20paas.loadbalancer.server.port=3001"
       - "traefik.http.middlewares.cima20paas-redirect.redirectscheme.scheme=https"
       - "traefik.http.routers.cima20paas-http.rule=Host(${DOMAIN:-cima20paas.cima20.com})"
       - "traefik.http.routers.cima20paas-http.entrypoints=web"
       - "traefik.http.routers.cima20paas-http.middlewares=cima20paas-redirect"
     healthcheck:
-      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000/api/health"]
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3001/api/health"]
       interval: 30s
       timeout: 10s
       retries: 3
