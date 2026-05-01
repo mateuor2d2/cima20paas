@@ -30,7 +30,10 @@ WORKDIR /app
 # Copy built output from builder
 COPY --from=builder /app/.output ./.output
 
-# Copy package.json for potential runtime dependencies
+# Copy node_modules for runtime dependencies (@nuxt/image needs ofetch)
+COPY --from=builder /app/node_modules ./node_modules
+
+# Copy package.json for reference
 COPY --from=builder /app/package.json ./
 
 # Expose the port Nuxt runs on
