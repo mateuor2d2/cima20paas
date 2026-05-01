@@ -30,6 +30,9 @@ WORKDIR /app
 # Copy built output from builder
 COPY --from=builder /app/.output ./.output
 
+# Copy content directory for Nuxt Content v3 runtime queries
+COPY --from=builder /app/content ./content
+
 # Copy node_modules for runtime dependencies (@nuxt/image needs ofetch)
 COPY --from=builder /app/node_modules ./node_modules
 
