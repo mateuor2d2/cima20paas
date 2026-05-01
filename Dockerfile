@@ -33,6 +33,9 @@ COPY --from=builder /app/.output ./.output
 # Copy content directory for Nuxt Content v3 runtime queries
 COPY --from=builder /app/content ./content
 
+# Copy content.config.ts for Nuxt Content v3 collection definitions
+COPY --from=builder /app/content.config.ts ./content.config.ts
+
 # Copy node_modules for runtime dependencies (@nuxt/image needs ofetch)
 COPY --from=builder /app/node_modules ./node_modules
 
