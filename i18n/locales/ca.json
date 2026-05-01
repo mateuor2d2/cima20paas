@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "home": "Inici",
+    "about": "Qui som",
+    "services": "Serveis",
+    "courses": "Cursos",
+    "mobile_units": "Unitats Mòbils",
+    "news": "Actualitat",
+    "gallery": "Galeria",
+    "contact": "Contacte"
+  },
+  "footer": {
+    "copyright": "© PROJECTES TÈCNICS SL - Tots els drets reservats",
+    "legal": "Avís Legal",
+    "privacy": "Privacitat",
+    "cookies": "Cookies",
+    "terms": "Condicions Legals",
+    "data_protection": "Protecció de Dades"
+  },
+  "contact": {
+    "title": "Contacte",
+    "name": "Nom",
+    "email": "Email",
+    "phone": "Telèfon",
+    "subject": "Assumpte",
+    "message": "Missatge",
+    "send": "Enviar missatge",
+    "sending": "Enviant...",
+    "success": "Missatge enviat correctament",
+    "success_desc": "Ens posarem en contacte amb tu aviat.",
+    "error": "Error en enviar el missatge"
+  },
+  "blog": {
+    "title": "Actualitat",
+    "description": "Notícies i articles sobre prevenció de riscos laborals",
+    "read_more": "Llegir més",
+    "back": "Tornar al blog",
+    "related": "Articles relacionats"
+  },
+  "hero": {
+    "title": "PROJECTES TÈCNICS SL",
+    "subtitle": "Seguretat, Prevenció, Medi Ambient i Qualitat"
+  }
+}

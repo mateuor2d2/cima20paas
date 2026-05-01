@@ -31,6 +31,23 @@
             <NuxtLink to="/blog" class="text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-primary transition-colors">Actualidad</NuxtLink>
             <NuxtLink to="/galeria" class="text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-primary transition-colors">Galería</NuxtLink>
             <NuxtLink to="/contacto" class="text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-primary transition-colors">Contacto</NuxtLink>
+            
+            <!-- Language switcher -->
+            <div class="flex items-center gap-2">
+              <NuxtLink
+                v-for="loc in $i18n.locales"
+                :key="loc.code"
+                :to="switchLocalePath(loc.code)"
+                :class="[
+                  'text-xs px-2 py-1 rounded transition-colors',
+                  $i18n.locale === loc.code
+                    ? 'bg-primary text-white'
+                    : 'text-neutral-600 dark:text-neutral-400 hover:text-primary'
+                ]"
+              >
+                {{ loc.code.toUpperCase() }}
+              </NuxtLink>
+            </div>
           </nav>
         </div>
       </div>

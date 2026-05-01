@@ -1,23 +1,24 @@
 ---
 title: Contacto
-description: Ponte en contacto con PROJECTES TÈCNICS SL
+description: Contacta con PROJECTES TÈCNICS SL
 site: cima
-navOrder: 3
 ---
 
 # Contacto
 
-## Información de contacto
+## ¿Necesitas más información?
 
-- **Dirección**: C/ Example 123, Palma de Mallorca
-- **Teléfono**: +34 971 123 456
+Estamos a tu disposición para resolver cualquier duda o proporcionarte un presupuesto sin compromiso.
+
+### Datos de contacto
+
 - **Email**: info@cima20.com
-- **Horario**: Lunes a Viernes, 8:00 - 17:00
+- **Teléfono**: +34 971 123 456
+- **Dirección**: Carrer de l'Empresa, 123, 07009 Palma, Illes Balears
 
-## Formulario de contacto
+### Horario de atención
 
-Puede enviarnos un mensaje directamente a info@cima20.com o llamarnos por teléfono.
+- Lunes a Viernes: 8:00 - 17:00
+- Sábados y Domingos: Cerrado
 
-## Ubicación
-
-Estamos ubicados en Palma de Mallorca, atendiendo a clientes en toda España.
+Rellena el formulario y nos pondremos en contacto contigo lo antes posible.
