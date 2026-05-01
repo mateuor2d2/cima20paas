@@ -7,13 +7,6 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
   ],
   content: {
-    sources: {
-      content: {
-        driver: 'fs',
-        prefix: '/',
-        base: 'content'
-      }
-    },
     build: {
       markdown: {
         highlight: {
