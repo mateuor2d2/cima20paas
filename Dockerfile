@@ -13,6 +13,9 @@ COPY package.json bun.lock ./
 # Install dependencies
 RUN bun install
 
+# Install additional runtime dependencies for @nuxt/image
+RUN bun add ofetch
+
 # Copy all source files
 COPY . .
 
