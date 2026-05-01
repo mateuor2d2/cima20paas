@@ -7,6 +7,7 @@ const props = defineProps({
 <template>
   <div class="prose dark:prose-invert max-w-none">
     <h1>{{ page.title }}</h1>
-    <ContentRenderer v-if="page" :value="page" />
+    <ContentRenderer v-if="page?.body" :value="page" />
+    <div v-else-if="page?.description">{{ page.description }}</div>
   </div>
 </template>

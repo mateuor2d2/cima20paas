@@ -1,41 +1,37 @@
+
 <script setup>
-const { siteId, config } = useSite()
+const { siteId } = useSite()
 
-const { data: homepage } = await useAsyncData(`homepage-${siteId.value}`, () => {
-  return queryCollection('pages')
-    .where('site', '=', siteId.value)
-    .where('path', 'LIKE', '%/index%')
-    .first()
-})
-
-const { data: latestPosts } = await useAsyncData(`latest-posts-${siteId.value}`, () => {
-  return queryCollection('posts')
-    .where('site', '=', siteId.value)
-    .order('date', 'DESC')
-    .limit(3)
-    .all()
-})
+// Simplified - just test if basic rendering works
+const title = 'PROJECTES TÈCNICS SL'
+const description = 'Seguridad, Prevención, Medio Ambiente y Calidad'
 
 useSeoMeta({
-  title: config.value?.name || 'CIMA',
-  description: config.value?.tagline || ''
+  title: title,
+  description: description
 })
 </script>
 
 <template>
   <div>
-    <SiteHero v-if="homepage?.hero" :page="homepage" />
-    
     <UContainer class="py-12">
-      <ContentPage v-if="homepage && !homepage.hero" :page="homepage" />
-      <ContentRenderer v-else-if="homepage" :value="homepage" class="prose dark:prose-invert max-w-none" />
+      <h1 class="text-4xl font-bold mb-4">{{ title }}</h1>
+      <p class="text-lg text-neutral-600 mb-8">{{ description }}</p>
       
-      <section v-if="latestPosts?.length" class="py-12">
-        <h2 class="text-2xl font-bold mb-6">Últimas noticias</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <ContentPost v-for="post in latestPosts" :key="post.path" :post="post" />
-        </div>
-      </section>
+      <div class="prose dark:prose-invert max-w-none">
+        <h2>Bienvenidos a PROJECTES TÈCNICS SL</h2>
+        <p>Somos una empresa especializada en <strong>Seguridad</strong>, <strong>Prevención de Riesgos Laborales</strong>, <strong>Medio Ambiente</strong> y <strong>Calidad</strong>.</p>
+        
+        <h3>Nuestros Servicios</h3>
+        <ul>
+          <li>Seguridad en el Trabajo</li>
+          <li>Prevención de Riesgos Laborales</li>
+          <li>Medio Ambiente</li>
+          <li>Calidad</li>
+        </ul>
+        
+        <p><a href="/contacto">Contáctanos</a> para más información.</p>
+      </div>
     </UContainer>
   </div>
 </template>

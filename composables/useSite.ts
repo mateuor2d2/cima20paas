@@ -9,15 +9,13 @@ export function useSite() {
       'cima20.com': 'cima',
       'localhost': 'cima',
       'localhost:3000': 'cima',
+      'localhost:3456': 'cima',
+      '127.0.0.1': 'cima',
+      '127.0.0.1:3000': 'cima',
+      '127.0.0.1:3456': 'cima',
     }
     return map[hostname] || 'default'
   })
 
-  const { data: config } = useAsyncData(`site-config-${siteId.value}`, () => {
-    return queryCollection('site_config')
-      .where('site', '=', siteId.value)
-      .first()
-  })
-
-  return { siteId, config, hostname }
+  return { siteId, hostname }
 }

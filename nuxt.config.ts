@@ -6,6 +6,13 @@ export default defineNuxtConfig({
     '@nuxt/image',
   ],
   content: {
+    sources: {
+      content: {
+        driver: 'fs',
+        prefix: '/',
+        base: 'content'
+      }
+    },
     build: {
       markdown: {
         highlight: {
