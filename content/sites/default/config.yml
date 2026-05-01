@@ -1,0 +1,11 @@
+---
+site: default
+name: Site por Defecto
+tagline: CMS Multi-Site con NuxtPress
+theme: default
+primaryColor: zinc
+navigation:
+  - label: Inicio
+    to: /
+footer:
+  text: © CMS Multi-Site - Powered by NuxtPress

@@ -1,0 +1,31 @@
+---
+site: cima
+name: PROJECTES TÈCNICS SL
+tagline: Seguridad, Prevención, Medio Ambiente y Calidad
+theme: cima
+primaryColor: blue
+navigation:
+  - label: Inicio
+    to: /
+  - label: Servicios
+    to: /servicios
+    children:
+      - label: Seguridad
+        to: /servicios/seguridad
+      - label: Prevención
+        to: /servicios/prevencion
+      - label: Medio Ambiente
+        to: /servicios/medio-ambiente
+      - label: Calidad
+        to: /servicios/calidad
+  - label: Sobre Nosotros
+    to: /sobre-nosotros
+  - label: Contacto
+    to: /contacto
+footer:
+  text: © PROJECTES TÈCNICS SL - Todos los derechos reservados
+  links:
+    - label: Aviso Legal
+      to: /aviso-legal
+    - label: Privacidad
+      to: /privacidad
