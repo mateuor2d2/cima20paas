@@ -1,6 +1,6 @@
 ---
-title: PROJECTES TÈCNICS SL
-description: Empresa líder en Seguridad, Prevención de Riesgos Laborales, Medio Ambiente y Calidad
+title: Inicio
+description: PROJECTES TÈCNICS SL - Seguridad, Prevención, Medio Ambiente y Calidad
 site: cima
 hero: true
 ---

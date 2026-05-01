@@ -4,21 +4,39 @@ tagline: Seguridad, Prevención, Medio Ambiente y Calidad
 theme: cima
 primaryColor: blue
 navigation:
-  - label: Inicio
-    to: /
+  - label: Quienes somos
+    to: /quienes-somos
   - label: Servicios
     to: /servicios
     children:
-      - label: Seguridad
-        to: /servicios/seguridad
+      - label: Empresa Saludable
+        to: /asesoria
       - label: Prevención
-        to: /servicios/prevencion
-      - label: Medio Ambiente
-        to: /servicios/medio-ambiente
-      - label: Calidad
-        to: /servicios/calidad
-  - label: Sobre Nosotros
-    to: /sobre-nosotros
+        to: /prevencion
+      - label: Reconocimientos Médicos
+        to: /reconocimientos-medicos
+      - label: Enfermería Personalizada
+        to: /consulta-enfermeria
+      - label: Vacunación
+        to: /vacunacion
+      - label: Laboratorio
+        to: /laboratorio
+      - label: Plan Sanitario Legionella
+        to: /plan-sanitario-legionella
+      - label: Bioimpedancia
+        to: /bioimpedancia
+      - label: Gestión Normativas ISO
+        to: /gestion-normativas-iso
+      - label: Prevención Desperdicio Alim.
+        to: /prevencion-desperdicio-alimentario
+  - label: Cursos
+    to: /cursos
+  - label: Unidades Móviles
+    to: /unidades-moviles
+  - label: Actualidad
+    to: /blog
+  - label: Galería
+    to: /galeria
   - label: Contacto
     to: /contacto
 footer:
@@ -28,3 +46,9 @@ footer:
       to: /aviso-legal
     - label: Privacidad
       to: /privacidad
+    - label: Cookies
+      to: /politica-cookies
+    - label: Condiciones Legales
+      to: /condiciones-legales
+    - label: Protección de Datos
+      to: /compromiso-proteccion-datos
