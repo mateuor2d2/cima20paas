@@ -1,56 +1,83 @@
-# CIMA WP CMS
+# CIMA20 PaaS
 
-CMS estilo WordPress multi-sitio con Nuxt 3 + NuxtPress (Nuxt Content v3) + Nuxt UI v3.
+CMS estilo WordPress multi-sitio construido con Nuxt 3 + Nuxt Content v3 + Nuxt UI v3.
 
-## Stack
+## Deploy en Render
 
-- **Nuxt 3** — Framework Vue full-stack
-- **Nuxt Content v3** — CMS basado en Markdown con query builder
-- **Nuxt UI v3** — Componentes UI
-- **@nuxt/image** — Optimización de imágenes
+### Opción 1: Dashboard Web (Recomendado)
 
-## Arquitectura Multi-Site
+1. Ve a [dashboard.render.com](https://dashboard.render.com)
+2. Click **New +** → **Web Service**
+3. Conecta el repo GitHub: `mateuor2d2/cima20paas`
+4. Configura:
+   - **Name**: `cima20paas`
+   - **Runtime**: Node
+   - **Build Command**: `bun install && bun run build`
+   - **Start Command**: `node .output/server/index.mjs`
+   - **Plan**: Starter ($7/month)
+5. Añade Environment Variables:
+   - `NODE_ENV=production`
+   - `NUXT_PUBLIC_SITE_URL=https://cima20paas.onrender.com`
+6. Click **Create Web Service**
 
-Detecta el hostname y carga contenido específico:
+### Opción 2: Blueprint (render.yaml)
 
-- `www.cima20.com` → sitio `cima`
-- Otros dominios → sitio `default` (fallback)
+El archivo `render.yaml` está incluido en el repo. Render lo detectará automáticamente al conectar el repo.
 
-## Estructura de contenido
+### Opción 3: CLI
+
+```bash
+# Instalar Render CLI
+curl -fsSL https://raw.githubusercontent.com/render-oss/render-cli/main/install.sh | bash
+
+# Deploy
+render deploy --service cima20paas
+```
+
+## Estructura del Proyecto
 
 ```
-content/sites/
-  cima/           # Contenido de cima20.com
-    pages/        # Páginas estáticas
-    posts/        # Blog posts
-    config.yml    # Config del sitio
-  default/        # Fallback
+cima-wp-cms/
+  content/
+    sites/
+      cima/           # Contenido de cima20.com
+        pages/        # Páginas estáticas
+        posts/        # Blog posts
+        config.yml    # Config del sitio
+  pages/
+    index.vue         # Homepage
+    [...slug].vue     # Páginas dinámicas
+  layouts/
+    default.vue       # Layout con navegación
 ```
 
 ## Comandos
 
 ```bash
-npm install
-npm run dev
-npm run build
-npm run generate
+# Desarrollo
+bun run dev
+
+# Build
+bun run build
+
+# Preview
+bun run preview
 ```
 
-## Variables de entorno
+## Stack
 
-```
-NUXT_PUBLIC_SITE_URL=https://www.cima20.com
-```
+- **Nuxt 4.4.4** - Framework Vue
+- **Nuxt Content 3.13.0** - CMS Markdown
+- **Nuxt UI 4.7.1** - Componentes UI
+- **Vue 3.5.33** - Framework UI
+- **Tailwind CSS** - Estilos
+- **Bun** - Package manager
 
-## Deployment
+## Características
 
-### Render.com
-
-```yaml
-services:
-  - type: web
-    name: cima-wp-cms
-    runtime: node
-    buildCommand: npm install && npm run build
-    startCommand: node .output/server/index.mjs
-```
+- ✅ Multi-site por hostname
+- ✅ Contenido en Markdown
+- ✅ Navegación dinámica
+- ✅ SEO meta por página
+- ✅ Dark mode
+- ✅ Responsive design
