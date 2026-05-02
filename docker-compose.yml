@@ -6,8 +6,8 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=production
-      - NUXT_PUBLIC_SITE_URL=${NUXT_PUBLIC_SITE_URL:-https://cima20paas.cima20.com}
-      - NUXT_PUBLIC_API_BASE=${NUXT_PUBLIC_API_BASE:-https://cima20paas.cima20.com}
+      - NUXT_PUBLIC_SITE_URL=${NUXT_PUBLIC_SITE_URL:-https://www.cima20.com}
+      - NUXT_PUBLIC_API_BASE=${NUXT_PUBLIC_API_BASE:-https://www.cima20.com}
       - SMTP_HOST=${SMTP_HOST}
       - SMTP_PORT=${SMTP_PORT:-587}
       - SMTP_USER=${SMTP_USER}
@@ -17,12 +17,12 @@ services:
       - dokploy-network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.cima20paas.rule=Host(${DOMAIN:-cima20paas.cima20.com})"
+      - "traefik.http.routers.cima20paas.rule=Host(${DOMAIN:-www.cima20.com,cima20.com})"
       - "traefik.http.routers.cima20paas.entrypoints=websecure"
       - "traefik.http.routers.cima20paas.tls.certresolver=letsencrypt"
       - "traefik.http.services.cima20paas.loadbalancer.server.port=3001"
       - "traefik.http.middlewares.cima20paas-redirect.redirectscheme.scheme=https"
-      - "traefik.http.routers.cima20paas-http.rule=Host(${DOMAIN:-cima20paas.cima20.com})"
+      - "traefik.http.routers.cima20paas-http.rule=Host(${DOMAIN:-www.cima20.com,cima20.com})"
       - "traefik.http.routers.cima20paas-http.entrypoints=web"
       - "traefik.http.routers.cima20paas-http.middlewares=cima20paas-redirect"
     healthcheck:
