@@ -129,9 +129,9 @@ useCimaBreadcrumbs([
           </div>
         </div>
 
-        <!-- Sidebar -->
+        <!-- Sidebar (lazy loaded) -->
         <div class="lg:w-80 shrink-0">
-          <BlogSidebar />
+          <LazyBlogSidebar />
         </div>
       </div>
     </UContainer>
