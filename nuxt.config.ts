@@ -52,6 +52,12 @@ export default defineNuxtConfig({
       redirectOn: 'root'
     }
   },
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.cima20.com',
+    name: 'PROJECTES TÈCNICS SL',
+    description: 'Seguretat, Prevenció, Medi Ambient i Qualitat',
+    defaultLocale: 'es',
+  },
   runtimeConfig: {
     smtpHost: process.env.SMTP_HOST,
     smtpPort: process.env.SMTP_PORT,
