@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     '@nuxtjs/i18n',
+    '@nuxtjs/seo',
   ],
   content: {
     build: {
