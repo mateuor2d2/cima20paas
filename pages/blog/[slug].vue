@@ -138,9 +138,14 @@ if (post.value) {
 
     <!-- Featured Image -->
     <UContainer v-if="post.image" class="max-w-4xl pt-8">
-      <img
+      <NuxtImg
         :src="post.image"
         :alt="post.title"
+        width="896"
+        height="504"
+        format="webp"
+        quality="80"
+        loading="eager"
         class="w-full rounded-xl shadow-lg"
       />
     </UContainer>

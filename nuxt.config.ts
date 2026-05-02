@@ -4,6 +4,15 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'node-server'
   },
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+      ],
+    }
+  },
   modules: [
     '@nuxt/ui',
     '@nuxt/content',
@@ -28,7 +37,7 @@ export default defineNuxtConfig({
   },
   image: {
     quality: 80,
-    format: ['webp', 'jpg'],
+    format: ['webp', 'avif', 'jpg'],
     screens: {
       xs: 320,
       sm: 640,
