@@ -16,8 +16,8 @@ if (!post.value) {
 }
 
 useSeoMeta({
-  title: post.value?.title,
-  description: post.value?.description
+  title: post.value?.title || 'Blog | PROJECTES TÈCNICS SL',
+  description: post.value?.description || 'Noticias y artículos sobre prevención de riesgos laborales y salud ocupacional'
 })
 </script>
 

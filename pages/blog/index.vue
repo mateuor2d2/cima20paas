@@ -10,7 +10,7 @@ const { data: posts } = await useAsyncData(`posts-${siteId.value}`, () => {
 })
 
 useSeoMeta({
-  title: 'Actualidad - CIMA 20',
+  title: 'Blog | PROJECTES TÈCNICS SL',
   description: 'Noticias y artículos sobre prevención de riesgos laborales y salud ocupacional'
 })
 </script>
