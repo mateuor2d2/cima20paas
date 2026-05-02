@@ -14,7 +14,7 @@ Llevar el CMS multi-sitio CIMA20 (Nuxt 3 + Nuxt Content v3 + Nuxt UI v3) desde s
 - [x] 4. Configurar `nuxt-simple-robots` para permitir indexación de páginas y blog, bloquear `/admin/`, `/api/` y assets — crear `public/robots.txt` como fallback y verificar que los meta robots se inyectan correctamente
 - [x] 5. Configurar `nuxt-simple-sitemap` para generar sitemap.xml dinámico — query todas las páginas y posts de Nuxt Content e inyectarlas como URLs adicionales en el sitemap
 - [x] 6. Añadir structured data (JSON-LD) con `useSchemaOrg()`: Organization para la home, LocalBusiness en contacto, Article en posts del blog, BreadcrumbList en todas las páginas
-- [ ] 7. Implementar Open Graph images dinámicas con `nuxt-og-image` — crear plantilla `components/OgImage/Main.vue` que renderice título + descripción + logo sobre fondo con colores CIMA20
+- [x] 7. Implementar Open Graph images dinámicas con `nuxt-og-image` — crear plantilla `components/OgImage/Main.satori.vue` que renderice título + descripción + logo sobre fondo con colores CIMA20
 
 ## Milestone 2: Blog Avanzado y Contenido Profesional (tareas 8-14)
 
