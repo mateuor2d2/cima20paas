@@ -13,6 +13,9 @@ export default defineNuxtConfig({
       ],
     }
   },
+  css: [
+    '~/assets/css/a11y.css',
+  ],
   modules: [
     '@nuxt/ui',
     '@nuxt/content',
