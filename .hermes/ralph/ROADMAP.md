@@ -53,7 +53,7 @@ Llevar el CMS multi-sitio CIMA20 (Nuxt 3 + Nuxt Content v3 + Nuxt UI v3) desde s
 - [x] 31. Configurar headers de seguridad en Nitro — añadir headers: `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `X-XSS-Protection: 1`, `Referrer-Policy: strict-origin-when-cross-origin`, `Permissions-Policy: camera=(), microphone=()`, y Content-Security-Policy básica
 - [x] 32. Implementar sistema de temas funcional — crear `components/themes/cima/` con overrides de header/footer/hero específicos para CIMA20, `composables/useThemeComponent.ts` que resuelva componentes del tema activo, y tema `default` como fallback
 - [x] 33. Añadir página 404 custom con diseño CIMA20 — crear `error.vue` en raíz con layout CIMA, mensaje descriptivo, enlace a home y a servicios principales, buscador de contenido
-- [ ] 34. Verificar todo el flujo end-to-end en producción — deploy con `docker compose up -d --build`, testear: todas las rutas responden 200, blog con paginación funciona, formulario envía email, admin edita contenido, SSL activo, sitemap accesible en /sitemap.xml, Lighthouse score > 80 en las 4 categorías
+- [x] 34. Verificar todo el flujo end-to-end en producción — deploy con `docker compose up -d --build`, testear: todas las rutas responden 200, blog con paginación funciona, formulario envía email, admin edita contenido, SSL activo, sitemap accesible en /sitemap.xml, Lighthouse score > 80 en las 4 categorías
 - [x] 35. Documentar el proyecto — actualizar README.md con: arquitectura, comandos, variables de entorno, guía de deploy, estructura de contenido, y actualizar el skill `cima-wp-cms` con las decisiones tomadas y pitfalls descubiertos durante el desarrollo
 
 ---
@@ -69,4 +69,4 @@ Llevar el CMS multi-sitio CIMA20 (Nuxt 3 + Nuxt Content v3 + Nuxt UI v3) desde s
 - Layout switched from hardcoded to dynamic theme resolution via useThemeComponent
 
 ## Skills generados durante el loop
-- (vacio al inicio)
+- utils/slugify.ts — Reusable slugify function for accent-aware URL normalization (prevención → prevencion, medio ambiente → medio-ambiente)
