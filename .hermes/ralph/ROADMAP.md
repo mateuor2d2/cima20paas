@@ -54,7 +54,7 @@ Llevar el CMS multi-sitio CIMA20 (Nuxt 3 + Nuxt Content v3 + Nuxt UI v3) desde s
 - [x] 32. Implementar sistema de temas funcional — crear `components/themes/cima/` con overrides de header/footer/hero específicos para CIMA20, `composables/useThemeComponent.ts` que resuelva componentes del tema activo, y tema `default` como fallback
 - [x] 33. Añadir página 404 custom con diseño CIMA20 — crear `error.vue` en raíz con layout CIMA, mensaje descriptivo, enlace a home y a servicios principales, buscador de contenido
 - [ ] 34. Verificar todo el flujo end-to-end en producción — deploy con `docker compose up -d --build`, testear: todas las rutas responden 200, blog con paginación funciona, formulario envía email, admin edita contenido, SSL activo, sitemap accesible en /sitemap.xml, Lighthouse score > 80 en las 4 categorías
-- [ ] 35. Documentar el proyecto — actualizar README.md con: arquitectura, comandos, variables de entorno, guía de deploy, estructura de contenido, y actualizar el skill `cima-wp-cms` con las decisiones tomadas y pitfalls descubiertos durante el desarrollo
+- [x] 35. Documentar el proyecto — actualizar README.md con: arquitectura, comandos, variables de entorno, guía de deploy, estructura de contenido, y actualizar el skill `cima-wp-cms` con las decisiones tomadas y pitfalls descubiertos durante el desarrollo
 
 ---
 
@@ -64,6 +64,9 @@ Llevar el CMS multi-sitio CIMA20 (Nuxt 3 + Nuxt Content v3 + Nuxt UI v3) desde s
 - Installed satori + @resvg/resvg-js as dev dependencies for OG image rendering
 - Categories implemented as flat strings (not nested taxonomy)
 - Pagination via query param ?page=N (6 posts per page)
+- Theme system uses resolveComponent() with fallback chain: ThemeOverride → SiteBase
+- Error page uses Options API defineProps (not TypeScript generics) for build compatibility
+- Layout switched from hardcoded to dynamic theme resolution via useThemeComponent
 
 ## Skills generados durante el loop
 - (vacio al inicio)
