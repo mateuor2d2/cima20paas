@@ -50,6 +50,13 @@ useSeoMeta({
   title: page.value?.title || 'Contacto',
   description: page.value?.description || 'Contacta con PROJECTES TÈCNICS SL'
 })
+
+// Structured data: LocalBusiness on contact page
+useCimaLocalBusiness()
+useCimaBreadcrumbs([
+  { name: 'Inicio', to: '/' },
+  { name: 'Contacto', to: '/contacto' }
+])
 </script>
 
 <template>

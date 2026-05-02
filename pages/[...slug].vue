@@ -27,6 +27,18 @@ useSeoMeta({
   description: page.value?.description || ''
 })
 
+// Structured data: Breadcrumbs for all content pages
+const breadcrumbItems = computed(() => {
+  const items = [{ name: 'Inicio', to: '/' }]
+  if (slugPath.value.includes('/')) {
+    const parts = slugPath.value.split('/')
+    items.push({ name: parts[0].charAt(0).toUpperCase() + parts[0].slice(1), to: `/${parts[0]}` })
+  }
+  items.push({ name: page.value?.title || slugPath.value, to: `/${slugPath.value}` })
+  return items
+})
+useCimaBreadcrumbs(breadcrumbItems.value)
+
 // If page not found, show 404
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Página no encontrada' })

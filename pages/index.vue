@@ -22,6 +22,12 @@ useSeoMeta({
   title: page.value?.title || 'PROJECTES TÈCNICS SL',
   description: page.value?.description || 'Seguridad, Prevención, Medio Ambiente y Calidad'
 })
+
+// Structured data: Organization schema on homepage
+useCimaOrganization()
+useCimaBreadcrumbs([
+  { name: 'Inicio', to: '/' }
+])
 </script>
 
 <template>

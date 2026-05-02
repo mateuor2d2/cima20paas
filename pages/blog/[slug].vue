@@ -19,6 +19,22 @@ useSeoMeta({
   title: post.value?.title || 'Blog | PROJECTES TÈCNICS SL',
   description: post.value?.description || 'Noticias y artículos sobre prevención de riesgos laborales y salud ocupacional'
 })
+
+// Structured data: Article schema on blog posts
+if (post.value) {
+  useCimaArticle(
+    post.value.title || '',
+    post.value.description || '',
+    post.value.date || new Date().toISOString(),
+    post.value.author,
+    post.value.image
+  )
+  useCimaBreadcrumbs([
+    { name: 'Inicio', to: '/' },
+    { name: 'Blog', to: '/blog' },
+    { name: post.value.title || slug, to: `/blog/${slug}` }
+  ])
+}
 </script>
 
 <template>

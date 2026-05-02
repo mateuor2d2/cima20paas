@@ -13,6 +13,12 @@ useSeoMeta({
   title: 'Blog | PROJECTES TÈCNICS SL',
   description: 'Noticias y artículos sobre prevención de riesgos laborales y salud ocupacional'
 })
+
+// Structured data: Breadcrumbs for blog
+useCimaBreadcrumbs([
+  { name: 'Inicio', to: '/' },
+  { name: 'Blog', to: '/blog' }
+])
 </script>
 
 <template>
