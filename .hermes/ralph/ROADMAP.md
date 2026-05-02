@@ -44,7 +44,7 @@ Llevar el CMS multi-sitio CIMA20 (Nuxt 3 + Nuxt Content v3 + Nuxt UI v3) desde s
 - [x] 25. Optimizar imágenes y assets — verificar que `@nuxt/image` usa `NuxtImg` en todas las imágenes del content, configurar formatos webp/avif, añadir placeholder blur para imágenes hero, preload del logo en `<head>`
 - [x] 26. Auditoría de accesibilidad WCAG AA — añadir `alt` text a todas las imágenes, labels en todos los formularios, atributos `aria-label` en nav y botones, skip-to-content link, roles semánticos (`<main>`, `<nav>`, `<article>`, `<footer>`), verificar contraste de colores con Lighthouse
 - [x] 27. Añadir foco visible y navegación por teclado — estilos `:focus-visible` en todos los interactivos, orden de tabulación lógico, manejo de focus en modales/diálogos del admin, trap focus en menú móvil
-- [ ] 28. Crear tests básicos de rutas con Vitest — instalar `vitest` + `@vue/test-utils` + `nuxt-vitest` via bun, escribir tests para: homepage renderiza, `/servicios/seguridad` devuelve 200, `/blog` lista posts, `/contacto` muestra formulario, `/admin` redirige sin auth, 404 en ruta inexistente
+- [ ] 28. Ejecutar verification swarm AAD (AI-Assured Development) — cargar skill `ai-assured-development`, detectar maquina target (h10 > tuxedo > cima20paas via Tailscale), sincronizar repo con git pull, generar y ejecutar: (a) tests unitarios Vitest para utils/composables criticos, (b) tests integracion para flujos API+store, (c) tests E2E Playwright para happy paths de contracts principales (home 200, blog lista, contacto envia, admin redirige sin auth, 404 custom). Fix fallos hasta que todo pase. Commit: `test: add AAD verification swarm`
 
 ## Milestone 5: Deploy Production-Ready y Pulido Final (tareas 29-35)
 

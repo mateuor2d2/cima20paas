@@ -71,12 +71,7 @@ export default defineNuxtConfig({
     defaultLocale: 'es',
   },
   ogImage: {
-    enabled: true,
-    defaults: {
-      component: 'OgImage/Main',
-      width: 1200,
-      height: 630,
-    },
+    enabled: false,
   },
 
   robots: {

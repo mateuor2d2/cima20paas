@@ -1,3 +1,8 @@
+<script setup>
+const { locales: availableLocales, locale: currentLocale } = useI18n()
+const localePath = useLocalePath()
+</script>
+
 <template>
   <div class="min-h-screen flex flex-col bg-white dark:bg-neutral-950">
     <!-- Skip to content link for keyboard navigation -->
@@ -50,14 +55,14 @@
             <!-- Language switcher -->
             <div class="flex items-center gap-2" role="group" aria-label="Selector de idioma">
               <NuxtLink
-                v-for="loc in $i18n.locales"
+                v-for="loc in availableLocales"
                 :key="loc.code"
-                :to="switchLocalePath(loc.code)"
+                :to="localePath(loc.code)"
                 :aria-label="`Cambiar idioma a ${loc.name}`"
-                :aria-current="$i18n.locale === loc.code ? 'true' : undefined"
+                :aria-current="currentLocale === loc.code ? 'true' : undefined"
                 :class="[
                   'text-xs px-2 py-1 rounded transition-colors',
-                  $i18n.locale === loc.code
+                  currentLocale === loc.code
                     ? 'bg-primary text-white'
                     : 'text-neutral-600 dark:text-neutral-400 hover:text-primary'
                 ]"

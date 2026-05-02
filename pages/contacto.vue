@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const route = useRoute()
 const { siteId } = useSite()
 const toast = useToast()
@@ -40,7 +40,7 @@ const loading = ref(false)
 const success = ref(false)
 
 // Inline validation functions
-function validateField(field: keyof typeof errors) {
+function validateField(field: string) {
   errors[field] = ''
   switch (field) {
     case 'name':
@@ -72,7 +72,7 @@ function validateField(field: keyof typeof errors) {
   }
 }
 
-function onBlur(field: keyof typeof touched) {
+function onBlur(field: string) {
   touched[field] = true
   validateField(field)
 }
@@ -94,10 +94,10 @@ function resetForm() {
   form.subject = ''
   form.message = ''
   form.website = ''
-  for (const key of Object.keys(errors) as (keyof typeof errors)[]) {
+  for (const key of Object.keys(errors) as string[]) {
     errors[key] = ''
   }
-  for (const key of Object.keys(touched) as (keyof typeof touched)[]) {
+  for (const key of Object.keys(touched) as string[]) {
     touched[key] = false
   }
 }
