@@ -58,6 +58,12 @@ export default defineNuxtConfig({
     description: 'Seguretat, Prevenció, Medi Ambient i Qualitat',
     defaultLocale: 'es',
   },
+  robots: {
+    UserAgent: '*',
+    Allow: '/',
+    Disallow: ['/admin/', '/api/', '/_nuxt/', '/_ipx/'],
+    Sitemap: 'https://www.cima20.com/sitemap.xml',
+  },
   runtimeConfig: {
     smtpHost: process.env.SMTP_HOST,
     smtpPort: process.env.SMTP_PORT,
