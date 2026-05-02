@@ -3,6 +3,7 @@ title: "Ventajas de las unidades móviles de reconocimientos médicos"
 description: "Cómo las unidades móviles facilitan la salud ocupacional"
 date: 2024-04-05
 author: "CIMA 20"
+category: "seguridad"
 tags: ["unidades móviles", "reconocimientos médicos", "servicios"]
 site: cima
 ---

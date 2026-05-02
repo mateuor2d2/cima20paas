@@ -43,6 +43,9 @@ useCimaBreadcrumbs([
         >
           <div class="p-6">
             <div class="flex items-center gap-2 text-sm text-neutral-500 mb-3">
+              <span v-if="post.category" class="px-2 py-0.5 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-xs font-medium rounded-full">
+                {{ post.category }}
+              </span>
               <span>{{ new Date(post.date).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' }) }}</span>
               <span v-if="post.author">· {{ post.author }}</span>
             </div>

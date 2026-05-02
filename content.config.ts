@@ -21,6 +21,7 @@ export default defineContentConfig({
         description: z.string().optional(),
         site: z.string(),
         date: z.date(),
+        category: z.string().optional(),
         tags: z.array(z.string()).optional(),
         author: z.string().optional(),
         image: z.string().optional(),

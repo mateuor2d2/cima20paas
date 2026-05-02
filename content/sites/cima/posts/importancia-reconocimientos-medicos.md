@@ -3,6 +3,7 @@ title: "La importancia de los reconocimientos médicos en la prevención"
 description: "Por qué los reconocimientos médicos son fundamentales para la salud laboral"
 date: 2024-02-10
 author: "CIMA 20"
+category: "prevención"
 tags: ["salud laboral", "reconocimientos médicos", "prevención"]
 site: cima
 ---

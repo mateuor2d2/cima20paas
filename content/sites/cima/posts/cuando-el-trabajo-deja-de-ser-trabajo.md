@@ -3,6 +3,7 @@ title: "Cuando el trabajo deja de ser solo trabajo y se convierte en una carga i
 description: "Reflexión sobre la salud mental en el entorno laboral"
 date: 2024-03-15
 author: "CIMA 20"
+category: "salud"
 tags: ["salud mental", "riesgos laborales", "bienestar"]
 site: cima
 ---

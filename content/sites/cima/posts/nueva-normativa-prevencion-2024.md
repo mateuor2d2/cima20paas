@@ -3,6 +3,7 @@ title: "Novedades en la normativa de prevención de riesgos laborales 2024"
 description: "Actualización sobre los cambios normativas en PRL para este año"
 date: 2024-01-20
 author: "CIMA 20"
+category: "legislación"
 tags: ["normativa", "PRL", "actualidad"]
 site: cima
 ---
