@@ -88,6 +88,7 @@ export default defineNuxtConfig({
     ],
   },
   runtimeConfig: {
+    adminPassword: process.env.ADMIN_PASSWORD || 'cima2024',
     smtpHost: process.env.SMTP_HOST,
     smtpPort: process.env.SMTP_PORT,
     smtpUser: process.env.SMTP_USER,
