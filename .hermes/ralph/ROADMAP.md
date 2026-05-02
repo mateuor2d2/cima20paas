@@ -22,9 +22,9 @@ Llevar el CMS multi-sitio CIMA20 (Nuxt 3 + Nuxt Content v3 + Nuxt UI v3) desde s
 - [x] 9. Implementar paginación en `pages/blog/index.vue` — query posts con `queryCollection('posts')`, calcular totalPages, y navegar con query param `?page=N` mostrando 6 posts por página
 - [x] 10. Crear `pages/blog/categoria/[slug].vue` — página dinámica que filtra posts por `category` usando `.where('category', '=', slug)` y los muestra en grid con breadcrumb
 - [x] 11. Crear `pages/blog/tag/[slug].vue` — página dinámica que filtra posts por tag (usando `.where()` con array contains si Nuxt Content lo soporta, o filtrado client-side)
-- [ ] 12. Añadir sidebar de blog con widget de categorías (con count), widget de tags como nube, y widget de posts recientes — componente `components/blog/BlogSidebar.vue`
-- [ ] 13. Mejorar layout del post individual `blog/[slug].vue` — añadir hero con imagen destacada, fecha formateada, autor, breadcrumbs, contenido con tipografía profesional, artículos relacionados al final (misma categoría)
-- [ ] 14. Crear 4 posts adicionales de ejemplo con contenido realista sobre servicios CIMA20 (reconocimientos médicos, unidades móviles, análisis legionella, formación PRL) para demostrar paginación y categorías
+- [x] 12. Añadir sidebar de blog con widget de categorías (con count), widget de tags como nube, y widget de posts recientes — componente `components/blog/BlogSidebar.vue`
+- [x] 13. Mejorar layout del post individual `blog/[slug].vue` — añadir hero con imagen destacada, fecha formateada, autor, breadcrumbs, contenido con tipografía profesional, artículos relacionados al final (misma categoría)
+- [x] 14. Crear 4 posts adicionales de ejemplo con contenido realista sobre servicios CIMA20 (reconocimientos médicos, unidades móviles, análisis legionella, formación PRL) para demostrar paginación y categorías
 
 ## Milestone 3: Panel Admin Funcional (tareas 15-21)
 

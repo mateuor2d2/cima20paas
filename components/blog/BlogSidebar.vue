@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const { siteId } = useSite()
 const route = useRoute()
 
@@ -120,10 +120,12 @@ const currentTag = computed(() => {
           :key="tag.name"
           :to="`/blog/tag/${tag.name}`"
           class="inline-block px-2.5 py-1 rounded-full border transition-colors"
-          :class="currentTag === tag.name
-            ? 'bg-blue-100 dark:bg-blue-900 border-blue-300 dark:border-blue-700 text-blue-700 dark:text-blue-300'
-            : 'border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800'"
-          :class="[tagSize(tag.count)]"
+          :class="[
+            currentTag === tag.name
+              ? 'bg-blue-100 dark:bg-blue-900 border-blue-300 dark:border-blue-700 text-blue-700 dark:text-blue-300'
+              : 'border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800',
+            tagSize(tag.count)
+          ]"
         >
           {{ tag.name }}
         </NuxtLink>
