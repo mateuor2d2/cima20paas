@@ -38,7 +38,7 @@ useCimaBreadcrumbs([
 
 <template>
   <div>
-    <UContainer class="py-12">
+    <UContainer class="py-12" role="region" aria-label="Contenido principal">
       <!-- Hero section -->
       <div v-if="page?.hero" class="text-center mb-12">
         <h1 class="text-4xl md:text-5xl font-bold mb-4 text-neutral-900 dark:text-white">

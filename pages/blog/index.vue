@@ -56,6 +56,7 @@ useCimaBreadcrumbs([
             <article
               v-for="post in posts"
               :key="post.path"
+              :aria-label="`Artículo: ${post.title}`"
               class="bg-white dark:bg-neutral-900 rounded-lg border border-neutral-200 dark:border-neutral-800 overflow-hidden hover:shadow-lg transition-shadow"
             >
               <div class="p-6">

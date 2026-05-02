@@ -78,9 +78,9 @@ if (post.value) {
         <!-- Breadcrumbs -->
         <nav class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 mb-6" aria-label="Breadcrumb">
           <NuxtLink to="/" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Inicio</NuxtLink>
-          <span>/</span>
+          <span aria-hidden="true">/</span>
           <NuxtLink to="/blog" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Blog</NuxtLink>
-          <span v-if="post.category">/</span>
+          <span v-if="post.category" aria-hidden="true">/</span>
           <NuxtLink
             v-if="post.category"
             :to="`/blog/categoria/${post.category}`"

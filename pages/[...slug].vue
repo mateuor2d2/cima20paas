@@ -54,14 +54,16 @@ if (!page.value) {
 <template>
   <div>
     <UContainer class="py-12">
-      <h1 class="text-4xl font-bold mb-4">{{ page?.title || slugPath }}</h1>
-      <p v-if="page?.description" class="text-lg text-neutral-600 dark:text-neutral-400 mb-8">
-        {{ page.description }}
-      </p>
+      <article>
+        <h1 class="text-4xl font-bold mb-4">{{ page?.title || slugPath }}</h1>
+        <p v-if="page?.description" class="text-lg text-neutral-600 dark:text-neutral-400 mb-8">
+          {{ page.description }}
+        </p>
 
-      <div v-if="page?.body" class="prose dark:prose-invert max-w-none">
-        <ContentRenderer :value="page" />
-      </div>
+        <div v-if="page?.body" class="prose dark:prose-invert max-w-none">
+          <ContentRenderer :value="page" />
+        </div>
+      </article>
     </UContainer>
   </div>
 </template>

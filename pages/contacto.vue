@@ -194,7 +194,7 @@ useCimaBreadcrumbs([
         <div class="bg-neutral-50 dark:bg-neutral-900 p-8 rounded-lg border border-neutral-200 dark:border-neutral-800">
           <h2 class="text-2xl font-semibold mb-6">Formulario de contacto</h2>
 
-          <form @submit.prevent="submitForm" class="space-y-4" novalidate>
+          <form @submit.prevent="submitForm" class="space-y-4" novalidate aria-label="Formulario de contacto">
             <!-- Honeypot — hidden from users, visible to bots -->
             <div class="absolute -left-[9999px] opacity-0 h-0 w-0 overflow-hidden" aria-hidden="true" tabindex="-1">
               <label for="website">No rellenar este campo</label>
