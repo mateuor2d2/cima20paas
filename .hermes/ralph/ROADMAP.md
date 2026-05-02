@@ -19,9 +19,9 @@ Llevar el CMS multi-sitio CIMA20 (Nuxt 3 + Nuxt Content v3 + Nuxt UI v3) desde s
 ## Milestone 2: Blog Avanzado y Contenido Profesional (tareas 8-14)
 
 - [x] 8. Añadir campos `category` y `tags` al schema de la colección `posts` en `content.config.ts` — actualizar frontmatter de los 4 posts existentes con categorías reales (prevención, seguridad, salud, legislación)
-- [ ] 9. Implementar paginación en `pages/blog/index.vue` — query posts con `queryCollection('posts')`, calcular totalPages, y navegar con query param `?page=N` mostrando 6 posts por página
-- [ ] 10. Crear `pages/blog/categoria/[slug].vue` — página dinámica que filtra posts por `category` usando `.where('category', '=', slug)` y los muestra en grid con breadcrumb
-- [ ] 11. Crear `pages/blog/tag/[slug].vue` — página dinámica que filtra posts por tag (usando `.where()` con array contains si Nuxt Content lo soporta, o filtrado client-side)
+- [x] 9. Implementar paginación en `pages/blog/index.vue` — query posts con `queryCollection('posts')`, calcular totalPages, y navegar con query param `?page=N` mostrando 6 posts por página
+- [x] 10. Crear `pages/blog/categoria/[slug].vue` — página dinámica que filtra posts por `category` usando `.where('category', '=', slug)` y los muestra en grid con breadcrumb
+- [x] 11. Crear `pages/blog/tag/[slug].vue` — página dinámica que filtra posts por tag (usando `.where()` con array contains si Nuxt Content lo soporta, o filtrado client-side)
 - [ ] 12. Añadir sidebar de blog con widget de categorías (con count), widget de tags como nube, y widget de posts recientes — componente `components/blog/BlogSidebar.vue`
 - [ ] 13. Mejorar layout del post individual `blog/[slug].vue` — añadir hero con imagen destacada, fecha formateada, autor, breadcrumbs, contenido con tipografía profesional, artículos relacionados al final (misma categoría)
 - [ ] 14. Crear 4 posts adicionales de ejemplo con contenido realista sobre servicios CIMA20 (reconocimientos médicos, unidades móviles, análisis legionella, formación PRL) para demostrar paginación y categorías
@@ -59,7 +59,11 @@ Llevar el CMS multi-sitio CIMA20 (Nuxt 3 + Nuxt Content v3 + Nuxt UI v3) desde s
 ---
 
 ## Decisiones tomadas
-- (vacio al inicio)
+- nuxt-og-image v6 requires `.satori.vue` suffix for components (not `.vue`)
+- Tag filtering done client-side since Nuxt Content v3 doesn't support array-contains queries
+- Installed satori + @resvg/resvg-js as dev dependencies for OG image rendering
+- Categories implemented as flat strings (not nested taxonomy)
+- Pagination via query param ?page=N (6 posts per page)
 
 ## Skills generados durante el loop
 - (vacio al inicio)
