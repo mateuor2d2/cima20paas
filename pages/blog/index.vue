@@ -1,16 +1,43 @@
 
 <script setup>
 const { siteId } = useSite()
+const route = useRoute()
 
-// Query all posts
-const { data: posts } = await useAsyncData(`posts-${siteId.value}`, () => {
+const POSTS_PER_PAGE = 6
+const currentPage = computed(() => Number(route.query.page) || 1)
+
+// Query all posts for the current site
+const { data: allPosts } = await useAsyncData(`posts-${siteId.value}`, () => {
   return queryCollection('posts')
+    .where('site', '=', siteId.value)
     .order('date', 'DESC')
     .all()
 })
 
+// Pagination logic
+const totalPosts = computed(() => allPosts.value?.length || 0)
+const totalPages = computed(() => Math.ceil(totalPosts.value / POSTS_PER_PAGE))
+
+const posts = computed(() => {
+  if (!allPosts.value) return []
+  const start = (currentPage.value - 1) * POSTS_PER_PAGE
+  return allPosts.value.slice(start, start + POSTS_PER_PAGE)
+})
+
+// Extract unique categories for sidebar
+const categories = computed(() => {
+  if (!allPosts.value) return []
+  const cats = new Map()
+  allPosts.value.forEach(post => {
+    if (post.category) {
+      cats.set(post.category, (cats.get(post.category) || 0) + 1)
+    }
+  })
+  return Array.from(cats.entries()).map(([name, count]) => ({ name, count }))
+})
+
 useSeoMeta({
-  title: 'Blog | PROJECTES TÈCNICS SL',
+  title: currentPage.value > 1 ? `Blog (página ${currentPage.value}) | PROJECTES TÈCNICS SL` : 'Blog | PROJECTES TÈCNICS SL',
   description: 'Noticias y artículos sobre prevención de riesgos laborales y salud ocupacional'
 })
 
@@ -34,6 +61,25 @@ useCimaBreadcrumbs([
       <p class="text-lg text-neutral-600 dark:text-neutral-400 mb-12">
         Noticias, artículos y novedades sobre prevención de riesgos laborales y salud ocupacional.
       </p>
+
+      <!-- Categories bar -->
+      <div v-if="categories.length" class="flex flex-wrap gap-2 mb-8">
+        <NuxtLink
+          to="/blog"
+          class="px-3 py-1.5 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+          :class="{ 'bg-blue-100 dark:bg-blue-900 border-blue-300 dark:border-blue-700 text-blue-700 dark:text-blue-300': !$route.query.category }"
+        >
+          Todos ({{ totalPosts }})
+        </NuxtLink>
+        <NuxtLink
+          v-for="cat in categories"
+          :key="cat.name"
+          :to="`/blog/categoria/${cat.name}`"
+          class="px-3 py-1.5 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+        >
+          {{ cat.name }} ({{ cat.count }})
+        </NuxtLink>
+      </div>
 
       <div v-if="posts?.length" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <article
@@ -61,13 +107,14 @@ useCimaBreadcrumbs([
             </p>
             
             <div v-if="post.tags?.length" class="flex flex-wrap gap-2">
-              <span
+              <NuxtLink
                 v-for="tag in post.tags"
                 :key="tag"
-                class="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 text-xs rounded-full"
+                :to="`/blog/tag/${tag}`"
+                class="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 text-xs rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
               >
                 {{ tag }}
-              </span>
+              </NuxtLink>
             </div>
           </div>
         </article>
@@ -75,6 +122,39 @@ useCimaBreadcrumbs([
 
       <div v-else class="text-center py-12">
         <p class="text-neutral-500">No hay artículos disponibles.</p>
+      </div>
+
+      <!-- Pagination -->
+      <div v-if="totalPages > 1" class="flex items-center justify-center gap-2 mt-12">
+        <NuxtLink
+          v-if="currentPage > 1"
+          :to="{ path: '/blog', query: { page: currentPage - 1 } }"
+          class="px-4 py-2 text-sm rounded-lg border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+        >
+          ← Anterior
+        </NuxtLink>
+
+        <template v-for="p in totalPages" :key="p">
+          <NuxtLink
+            v-if="totalPages <= 7 || Math.abs(p - currentPage) <= 2 || p === 1 || p === totalPages"
+            :to="{ path: '/blog', query: p > 1 ? { page: p } : {} }"
+            class="w-10 h-10 flex items-center justify-center text-sm rounded-lg border transition-colors"
+            :class="p === currentPage
+              ? 'bg-blue-600 text-white border-blue-600'
+              : 'border-neutral-300 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800'"
+          >
+            {{ p }}
+          </NuxtLink>
+          <span v-else-if="Math.abs(p - currentPage) === 3" class="text-neutral-400">…</span>
+        </template>
+
+        <NuxtLink
+          v-if="currentPage < totalPages"
+          :to="{ path: '/blog', query: { page: currentPage + 1 } }"
+          class="px-4 py-2 text-sm rounded-lg border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+        >
+          Siguiente →
+        </NuxtLink>
       </div>
     </UContainer>
   </div>

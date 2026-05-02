@@ -23,7 +23,9 @@
   },
   "devDependencies": {
     "@nuxtjs/seo": "^5.1.3",
+    "@resvg/resvg-js": "^2.6.2",
     "@types/node": "latest",
+    "satori": "^0.26.0",
     "typescript": "latest"
   }
 }
