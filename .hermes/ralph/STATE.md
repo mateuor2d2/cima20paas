@@ -2,13 +2,13 @@
 goal: CMS WordPress con Nuxt para cima20 - production-ready
 project_path: /home/oc/NuxtsProjects/cima-wp-cms
 started: 2026-05-02
-current_task: 16
+current_task: 18
 current_milestone: 3
 total_tasks: 35
-completed_tasks: 15
+completed_tasks: 17
 status: RUNNING
 blocked_reason: 
-last_update: 2026-05-02 08:00
+last_update: 2026-05-02 08:15
 model_plan: kimi-coding
 model_plan_name: kimi-2.6
 model_exec: glm-5.1
