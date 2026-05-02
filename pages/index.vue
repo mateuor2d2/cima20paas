@@ -14,7 +14,7 @@ const { data: page } = await useAsyncData(`homepage-${siteId.value}`, () => {
 
 // Query site config
 const { data: siteConfig } = await useAsyncData(`config-${siteId.value}`, () => {
-  return queryCollection('site_config').path(`/sites/${siteId.value}/config`).first()
+  return queryCollection('site_config').where('stem', '=', `sites/${siteId.value}/config`).first()
 })
 
 // Set SEO meta from content or defaults

@@ -10,7 +10,7 @@ const props = defineProps({
 
 const { siteId } = useSite()
 const { data: siteConfig } = await useAsyncData(`config-hero-${siteId.value}`, () => {
-  return queryCollection('site_config').path(`/sites/${siteId.value}/config`).first()
+  return queryCollection('site_config').where('stem', '=', `sites/${siteId.value}/config`).first()
 })
 
 const tagline = computed(() => siteConfig.value?.tagline || '')

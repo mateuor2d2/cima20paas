@@ -7,7 +7,7 @@ const { siteId } = useSite()
 const year = new Date().getFullYear()
 
 const { data: siteConfig } = await useAsyncData(`config-footer-${siteId.value}`, () => {
-  return queryCollection('site_config').path(`/sites/${siteId.value}/config`).first()
+  return queryCollection('site_config').where('stem', '=', `sites/${siteId.value}/config`).first()
 })
 
 const footerLinks = computed(() => siteConfig.value?.footer?.links || [])

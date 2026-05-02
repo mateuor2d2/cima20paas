@@ -9,7 +9,7 @@ const localePath = useLocalePath()
 const mobileMenuOpen = ref(false)
 
 const { data: siteConfig } = await useAsyncData(`config-header-${siteId.value}`, () => {
-  return queryCollection('site_config').path(`/sites/${siteId.value}/config`).first()
+  return queryCollection('site_config').where('stem', '=', `sites/${siteId.value}/config`).first()
 })
 
 const navItems = computed(() => siteConfig.value?.navigation || [])

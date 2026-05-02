@@ -8,7 +8,7 @@ const { siteId } = useSite()
 
 // Load current config
 const { data: siteConfig, refresh: refreshConfig } = await useAsyncData(`admin-config-${siteId.value}`, () => {
-  return queryCollection('site_config').path(`/sites/${siteId.value}/config`).first()
+  return queryCollection('site_config').where('stem', '=', `sites/${siteId.value}/config`).first()
 })
 
 // Form state

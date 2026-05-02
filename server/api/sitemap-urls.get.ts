@@ -1,5 +1,5 @@
 import { defineEventHandler } from 'h3'
-import { serverQueryContent } from '#content/server'
+import { queryCollection } from '@nuxt/content/server'
 
 export default defineEventHandler(async (event) => {
   const siteUrl = 'https://www.cima20.com'
@@ -7,9 +7,9 @@ export default defineEventHandler(async (event) => {
 
   try {
     // Query all pages from Nuxt Content v3
-    const pages = await serverQueryContent(event, 'pages')
+    const pages = await queryCollection(event, 'pages')
       .where('site', '=', 'cima')
-      .find()
+      .all()
 
     for (const page of pages) {
       // Extract the public-facing path from the content path
@@ -35,9 +35,9 @@ export default defineEventHandler(async (event) => {
     }
 
     // Query all blog posts
-    const posts = await serverQueryContent(event, 'posts')
+    const posts = await queryCollection(event, 'posts')
       .where('site', '=', 'cima')
-      .find()
+      .all()
 
     for (const post of posts) {
       let publicPath = post.path || ''
