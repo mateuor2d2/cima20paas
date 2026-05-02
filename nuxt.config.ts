@@ -16,6 +16,16 @@ export default defineNuxtConfig({
   css: [
     '~/assets/css/a11y.css',
   ],
+  components: [
+    // Base components: site/, blog/, content/ → SiteHeader, BlogSidebar, etc.
+    { path: '~/components/site', prefix: 'Site' },
+    { path: '~/components/blog', prefix: 'Blog' },
+    { path: '~/components/content', prefix: 'Content' },
+    // Theme components: themes/cima/ → CimaHeader, CimaFooter, etc. (no path prefix, just filename)
+    { path: '~/components/themes/cima', pathPrefix: false },
+    // Catch-all for any other components (must be last, excludes already-scanned dirs)
+    { path: '~/components', pathPrefix: true },
+  ],
   modules: [
     '@nuxt/ui',
     '@nuxt/content',

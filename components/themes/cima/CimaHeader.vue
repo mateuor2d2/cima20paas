@@ -16,7 +16,7 @@ const navItems = computed(() => siteConfig.value?.navigation || [])
 const siteName = computed(() => siteConfig.value?.name || 'CIMA 20')
 const mobileNavItems = computed(() => {
   // Flatten children for mobile menu
-  const items: Array<{ label: string; to: string; isChild: boolean }> = []
+  const items = /** @type {Array<{label:string,to:string,isChild:boolean}>} */ ([])
   for (const item of navItems.value) {
     items.push({ label: item.label, to: item.to, isChild: false })
     if (item.children?.length) {
