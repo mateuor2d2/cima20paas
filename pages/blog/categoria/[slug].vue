@@ -3,21 +3,27 @@ const { siteId } = useSite()
 const route = useRoute()
 const slug = String(route.params.slug)
 
-// Query all posts in this category
-const { data: posts } = await useAsyncData(`posts-cat-${slug}-${siteId.value}`, () => {
+// Query all posts for this site, then filter by slugified category
+const { data: allPosts } = await useAsyncData(`posts-cat-${slug}-${siteId.value}`, () => {
   return queryCollection('posts')
     .where('site', '=', siteId.value)
-    .where('category', '=', slug)
     .order('date', 'DESC')
     .all()
+})
+
+// Match by slugifying the stored category value
+const posts = computed(() => {
+  if (!allPosts.value) return []
+  return allPosts.value.filter(post => slugify(post.category || '') === slug)
 })
 
 if (!posts.value?.length) {
   throw createError({ statusCode: 404, statusMessage: 'Categoría no encontrada' })
 }
 
+// Use the original (non-slugified) category name for display
 const categoryName = computed(() => {
-  return slug.charAt(0).toUpperCase() + slug.slice(1)
+  return posts.value[0]?.category || slug
 })
 
 useSeoMeta({

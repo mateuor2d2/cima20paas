@@ -3,7 +3,7 @@ const { siteId } = useSite()
 const route = useRoute()
 const slug = String(route.params.slug)
 
-// Query all posts, then filter by tag client-side (Nuxt Content v3 doesn't support array-contains)
+// Query all posts, then filter by tag client-side using slugified comparison
 const { data: allPosts } = await useAsyncData(`posts-tag-${slug}-${siteId.value}`, () => {
   return queryCollection('posts')
     .where('site', '=', siteId.value)
@@ -11,29 +11,39 @@ const { data: allPosts } = await useAsyncData(`posts-tag-${slug}-${siteId.value}
     .all()
 })
 
+// Match by slugifying each tag value (tags may contain accented chars)
 const posts = computed(() => {
   if (!allPosts.value) return []
-  return allPosts.value.filter(post => post.tags?.includes(slug))
+  return allPosts.value.filter(post =>
+    post.tags?.some(tag => slugify(tag) === slug)
+  )
 })
 
 if (!posts.value.length) {
   throw createError({ statusCode: 404, statusMessage: 'Tag no encontrado' })
 }
 
+// Use the original (non-slugified) tag name for display
+const tagName = computed(() => {
+  if (!posts.value.length) return slug
+  const post = posts.value[0]
+  return post.tags?.find(tag => slugify(tag) === slug) || slug
+})
+
 useSeoMeta({
-  title: `Tag: ${slug} | Blog | PROJECTES TÈCNICS SL`,
-  description: `Artículos etiquetados con "${slug}"`
+  title: `Tag: ${tagName.value} | Blog | PROJECTES TÈCNICS SL`,
+  description: `Artículos etiquetados con "${tagName.value}"`
 })
 
 defineOgImage({
-  title: `Tag: ${slug}`,
-  description: `Artículos etiquetados con "${slug}"`,
+  title: `Tag: ${tagName.value}`,
+  description: `Artículos etiquetados con "${tagName.value}"`,
 })
 
 useCimaBreadcrumbs([
   { name: 'Inicio', to: '/' },
   { name: 'Blog', to: '/blog' },
-  { name: `Tag: ${slug}`, to: `/blog/tag/${slug}` }
+  { name: `Tag: ${tagName.value}`, to: `/blog/tag/${slug}` }
 ])
 </script>
 
@@ -44,7 +54,7 @@ useCimaBreadcrumbs([
         <NuxtLink to="/blog" class="hover:text-primary transition-colors">← Volver al blog</NuxtLink>
       </nav>
 
-      <h1 class="text-4xl font-bold mb-4">Tag: {{ slug }}</h1>
+      <h1 class="text-4xl font-bold mb-4">Tag: {{ tagName }}</h1>
       <p class="text-lg text-neutral-600 dark:text-neutral-400 mb-12">
         {{ posts.length }} artículo{{ posts.length !== 1 ? 's' : '' }} con esta etiqueta.
       </p>

@@ -55,18 +55,18 @@ const recentPosts = computed(() => {
   return allPosts.value.slice(0, 5)
 })
 
-// Current category for active state
+// Current category for active state (compare via slugified value)
 const currentCategory = computed(() => {
   if (route.path.startsWith('/blog/categoria/')) {
-    return route.params.slug
+    return String(route.params.slug)
   }
   return null
 })
 
-// Current tag for active state
+// Current tag for active state (compare via slugified value)
 const currentTag = computed(() => {
   if (route.path.startsWith('/blog/tag/')) {
-    return route.params.slug
+    return String(route.params.slug)
   }
   return null
 })
@@ -96,9 +96,9 @@ const currentTag = computed(() => {
         </li>
         <li v-for="cat in categories" :key="cat.name">
           <NuxtLink
-            :to="`/blog/categoria/${cat.name}`"
+            :to="`/blog/categoria/${slugify(cat.name)}`"
             class="flex items-center justify-between text-sm py-1.5 px-2 rounded-md transition-colors"
-            :class="currentCategory === cat.name
+            :class="currentCategory === slugify(cat.name)
               ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-medium'
               : 'text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800'"
           >
@@ -118,10 +118,10 @@ const currentTag = computed(() => {
         <NuxtLink
           v-for="tag in tags"
           :key="tag.name"
-          :to="`/blog/tag/${tag.name}`"
+          :to="`/blog/tag/${slugify(tag.name)}`"
           class="inline-block px-2.5 py-1 rounded-full border transition-colors"
           :class="[
-            currentTag === tag.name
+            currentTag === slugify(tag.name)
               ? 'bg-blue-100 dark:bg-blue-900 border-blue-300 dark:border-blue-700 text-blue-700 dark:text-blue-300'
               : 'border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800',
             tagSize(tag.count)
