@@ -28,7 +28,7 @@ Llevar el CMS multi-sitio CIMA20 (Nuxt 3 + Nuxt Content v3 + Nuxt UI v3) desde s
 
 ## Milestone 3: Panel Admin Funcional (tareas 15-21)
 
-- [ ] 15. Crear layout dedicado `layouts/admin.vue` con sidebar de navegación (Dashboard, Páginas, Posts, Config, Blog Categories) usando Nuxt UI `UNavigationMenu` y proteger la ruta `/admin` con middleware de autenticación básica (password simple en runtimeConfig)
+- [x] 15. Crear layout dedicado `layouts/admin.vue` con sidebar de navegación (Dashboard, Páginas, Posts, Config, Blog Categories) usando Nuxt UI `UNavigationMenu` y proteger la ruta `/admin` con middleware de autenticación básica (password simple en runtimeConfig)
 - [ ] 16. Implementar listado CRUD de páginas en `pages/admin/pages.vue` — usar server API `server/api/admin/pages.get.ts` que lee todos los .md del sitio, tabla con UTable, botones de editar/eliminar que navegan al editor
 - [ ] 17. Crear editor de páginas `pages/admin/pages/[slug].vue` — formulario con UForm: título, descripción, navOrder, hero toggle, textarea para markdown con preview en vivo, y endpoint `server/api/admin/pages.put.ts` que escribe el archivo .md con `fs.writeFile`
 - [ ] 18. Implementar listado CRUD de posts en `pages/admin/posts.vue` — tabla con UTable mostrando título, fecha, categoría, tags, botones editar/eliminar, botón crear nuevo post

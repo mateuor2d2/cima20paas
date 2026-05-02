@@ -57,7 +57,7 @@ useSeoMeta({
         <tbody class="divide-y divide-neutral-200 dark:divide-neutral-800">
           <tr v-for="page in pages" :key="page.path" class="hover:bg-neutral-50 dark:hover:bg-neutral-800/50">
             <td class="px-4 py-3">
-              <NuxtLink :to="`/admin/pages/edit${page.path}`" class="font-medium text-neutral-900 dark:text-neutral-100 hover:text-primary transition-colors">
+              <NuxtLink :to="`/admin/pages/edit?path=${encodeURIComponent(page.path)}`" class="font-medium text-neutral-900 dark:text-neutral-100 hover:text-primary transition-colors">
                 {{ page.title }}
               </NuxtLink>
             </td>
@@ -68,7 +68,7 @@ useSeoMeta({
                 <NuxtLink :to="page.path" target="_blank" class="text-sm text-primary hover:underline">
                   Ver
                 </NuxtLink>
-                <NuxtLink :to="`/admin/pages/edit${page.path}`" class="text-sm text-primary hover:underline">
+                <NuxtLink :to="`/admin/pages/edit?path=${encodeURIComponent(page.path)}`" class="text-sm text-primary hover:underline">
                   Editar
                 </NuxtLink>
                 <button
