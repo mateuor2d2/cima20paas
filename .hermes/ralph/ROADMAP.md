@@ -11,7 +11,7 @@ Llevar el CMS multi-sitio CIMA20 (Nuxt 3 + Nuxt Content v3 + Nuxt UI v3) desde s
 - [x] 1. Instalar y configurar `@nuxtjs/seo` (nuxt-og-image, nuxt-site-config, nuxt-simple-robots, nuxt-simple-sitemap, nuxt-schema-org, nuxt-seo-utils, nuxt-link-checker) via `bun add -D @nuxtjs/seo` y añadir a `modules` en `nuxt.config.ts`
 - [x] 2. Configurar `nuxt.config.ts` con `site.url`, `site.name`, `site.description` y `site.defaultLocale` para que todos los módulos SEO hereden la configuración base
 - [x] 3. Añadir `useSeoMeta()` en todas las páginas (`index.vue`, `[...slug].vue`, `blog/index.vue`, `blog/[slug].vue`) usando los campos `title`, `description`, `og:image` del frontmatter de cada contenido
-- [ ] 4. Configurar `nuxt-simple-robots` para permitir indexación de páginas y blog, bloquear `/admin/`, `/api/` y assets — crear `public/robots.txt` como fallback y verificar que los meta robots se inyectan correctamente
+- [x] 4. Configurar `nuxt-simple-robots` para permitir indexación de páginas y blog, bloquear `/admin/`, `/api/` y assets — crear `public/robots.txt` como fallback y verificar que los meta robots se inyectan correctamente
 - [ ] 5. Configurar `nuxt-simple-sitemap` para generar sitemap.xml dinámico — query todas las páginas y posts de Nuxt Content e inyectarlas como URLs adicionales en el sitemap
 - [ ] 6. Añadir structured data (JSON-LD) con `useSchemaOrg()`: Organization para la home, LocalBusiness en contacto, Article en posts del blog, BreadcrumbList en todas las páginas
 - [ ] 7. Implementar Open Graph images dinámicas con `nuxt-og-image` — crear plantilla `components/OgImage/Main.vue` que renderice título + descripción + logo sobre fondo con colores CIMA20

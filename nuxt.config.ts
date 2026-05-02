@@ -64,6 +64,20 @@ export default defineNuxtConfig({
     Disallow: ['/admin/', '/api/', '/_nuxt/', '/_ipx/'],
     Sitemap: 'https://www.cima20.com/sitemap.xml',
   },
+  sitemap: {
+    sources: [
+      '/api/sitemap-urls',
+    ],
+    autoLastmod: true,
+    defaults: {
+      changefreq: 'monthly',
+      priority: 0.5,
+    },
+    xslColumns: [
+      { label: 'URL', width: '65%' },
+      { label: 'Last Modified', select: 'sitemap:lastmod', width: '25%' },
+    ],
+  },
   runtimeConfig: {
     smtpHost: process.env.SMTP_HOST,
     smtpPort: process.env.SMTP_PORT,
