@@ -58,6 +58,15 @@ export default defineNuxtConfig({
     description: 'Seguretat, Prevenció, Medi Ambient i Qualitat',
     defaultLocale: 'es',
   },
+  ogImage: {
+    enabled: true,
+    defaults: {
+      component: 'OgImage/Main',
+      width: 1200,
+      height: 630,
+    },
+  },
+
   robots: {
     UserAgent: '*',
     Allow: '/',

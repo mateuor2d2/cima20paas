@@ -20,6 +20,14 @@ useSeoMeta({
   description: post.value?.description || 'Noticias y artículos sobre prevención de riesgos laborales y salud ocupacional'
 })
 
+// Dynamic OG Image for blog post
+if (post.value) {
+  defineOgImage({
+    title: post.value.title || 'Blog',
+    description: post.value.description || '',
+  })
+}
+
 // Structured data: Article schema on blog posts
 if (post.value) {
   useCimaArticle(

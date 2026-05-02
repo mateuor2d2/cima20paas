@@ -27,6 +27,12 @@ useSeoMeta({
   description: page.value?.description || ''
 })
 
+// Dynamic OG Image
+defineOgImage({
+  title: page.value?.title || slugPath.value,
+  description: page.value?.description || '',
+})
+
 // Structured data: Breadcrumbs for all content pages
 const breadcrumbItems = computed(() => {
   const items = [{ name: 'Inicio', to: '/' }]

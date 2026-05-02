@@ -14,6 +14,12 @@ useSeoMeta({
   description: 'Noticias y artículos sobre prevención de riesgos laborales y salud ocupacional'
 })
 
+// Dynamic OG Image for blog listing
+defineOgImage({
+  title: 'Blog | PROJECTES TÈCNICS SL',
+  description: 'Noticias y artículos sobre prevención de riesgos laborales y salud ocupacional',
+})
+
 // Structured data: Breadcrumbs for blog
 useCimaBreadcrumbs([
   { name: 'Inicio', to: '/' },
