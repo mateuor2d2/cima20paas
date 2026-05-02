@@ -38,7 +38,7 @@ Llevar el CMS multi-sitio CIMA20 (Nuxt 3 + Nuxt Content v3 + Nuxt UI v3) desde s
 
 ## Milestone 4: Formulario, Performance y Accesibilidad (tareas 22-28)
 
-- [ ] 22. Implementar envío real de email en `server/api/contact.post.ts` con nodemailer usando las cred vars del runtimeConfig — validar campos, sanitizar input, enviar email HTML formateado con los datos del formulario, y devolver respuesta JSON success/error
+- [x] 22. Implementar envío real de email en `server/api/contact.post.ts` con nodemailer usando las cred vars del runtimeConfig — validar campos, sanitizar input, enviar email HTML formateado con los datos del formulario, y devolver respuesta JSON success/error
 - [ ] 23. Añadir feedback visual al formulario de contacto — UToast de Nuxt UI para confirmación de envío, estados de loading en botón, validación client-side con feedback inline, honeypot anti-spam
 - [ ] 24. Configurar lazy loading y code splitting — usar `defineAsyncComponent` para componentes pesados, `Lazy` prefix en componentes, verificar que Nuxt hace code splitting automático por ruta, y añadir `loading.vue` en páginas pesadas
 - [ ] 25. Optimizar imágenes y assets — verificar que `@nuxt/image` usa `NuxtImg` en todas las imágenes del content, configurar formatos webp/avif, añadir placeholder blur para imágenes hero, preload del logo en `<head>`
