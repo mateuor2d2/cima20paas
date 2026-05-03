@@ -1,19 +1,21 @@
 ---
-title: Política de Privacidad
-description: Política de privacidad de PROJECTES TÈCNICS SL
+title: Privacidad
+description: Información sobre privacidad y protección de datos de CIMA 20
 site: cima
 ---
 
-# Política de Privacidad
+# Privacidad
 
-## Responsable del tratamiento
+En **CIMA 20** respetamos tu privacidad y cumplimos con la normativa de protección de datos.
 
-PROJECTES TÈCNICS SL, con CIF B07947955.
+Consulta nuestra [Política de Privacidad](/politica-privacidad) completa para obtener información detallada sobre:
 
-## Datos que recopilamos
+- Datos que recabamos y finalidad del tratamiento
+- Base legal para el tratamiento
+- Derechos de los interesados
+- Seguridad de la información
+- Destinatarios de los datos
 
-Solo recopilamos los datos necesarios para atender sus consultas y prestar nuestros servicios.
+---
 
-## Sus derechos
-
-Puede ejercer sus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad contactándonos en info@cima20.com.
+Para cualquier consulta sobre privacidad, puedes contactarnos en **cima20@cima20.com**.

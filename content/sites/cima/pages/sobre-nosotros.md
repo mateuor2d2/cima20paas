@@ -1,25 +1,41 @@
 ---
 title: Sobre Nosotros
-description: Conoce PROJECTES TÈCNICS SL, líderes en seguridad y prevención desde 1999
+description: Conoce CIMA 20 — Projectes Tècnics SL, más de 20 años en prevención de riesgos laborales
 site: cima
-navOrder: 2
 ---
 
 # Sobre Nosotros
 
-PROJECTES TÈCNICS SL es una empresa con sede en Mallorca especializada en servicios técnicos de **Seguridad**, **Prevención de Riesgos Laborales**, **Medio Ambiente** y **Calidad**.
+## Projectes Tècnics SL (CIMA 20)
 
-## Nuestra Historia
+Somos una empresa de **prevención de riesgos laborales y salud laboral** con sede en Palma de Mallorca. Desde 1999 trabajamos para que las empresas de las Illes Balears cumplan con la normativa y, sobre todo, para que sus trabajadores estén sanos y seguros.
 
-Fundada en 1999, hemos crecido hasta convertirnos en un referente en el sector, atendiendo a más de 300 clientes en toda España.
+---
 
-## Nuestro Equipo
+## Misión
 
-Contamos con un equipo multidisciplinar de ingenieros, técnicos y especialistas en prevención, todos ellos altamente cualificados y en continua formación.
+Proteger la salud de los trabajadores mediante servicios de prevención de calidad, accesibles y adaptados a cada empresa, independientemente de su tamaño o sector.
 
-## Nuestros Valores
+## Visión
 
-- **Compromiso**: Con la seguridad de nuestros clientes
-- **Profesionalidad**: En cada servicio que prestamos
-- **Innovación**: Adaptándonos a la normativa y tecnología
-- **Cercanía**: Trato personalizado y directo
+Ser el referente en salud laboral en las Illes Balears, reconocidos por la calidad de nuestros servicios y la cercanía en el trato con nuestros clientes.
+
+## Valores
+
+- **Cercanía** — Trato personalizado, sin call centers ni procesos automatizados
+- **Profesionalidad** — Equipo cualificado en constante formación
+- **Compromiso** — Con la salud de los trabajadores y la satisfacción de las empresas
+- **Innovación** — Unidades móviles, tecnología de diagnóstico y metodologías actualizadas
+
+---
+
+## Cifras clave
+
+- **+20 años** de experiencia
+- **+300 empresas** confían en nosotros
+- **+10.000 trabajadores** atendidos al año
+- Cobertura en toda las Illes Balears
+
+---
+
+[Conoce más sobre nosotros](/quienes-somos) · [Nuestros servicios](/servicios) · [Contacto](/contacto)

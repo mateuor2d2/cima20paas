@@ -1,20 +1,17 @@
 ---
-title: Actualidad
-description: Noticias y artículos de interés
+title: Blog
+description: Noticias, artículos y novedades sobre salud laboral y prevención de riesgos
 site: cima
 ---
 
-# Actualidad
+# Blog
 
-## Noticias y artículos
+## Últimas noticias y artículos
 
-Mantente informado sobre las últimas novedades en prevención de riesgos laborales, salud ocupacional y normativa.
+En nuestro blog encontrarás artículos sobre **salud laboral**, **prevención de riesgos**, **normativa**, **empresa saludable** y mucho más.
 
-### Últimos artículos
+---
 
-- Novedades en normativa de prevención
-- Consejos de salud en el trabajo
-- Casos de éxito de nuestros clientes
-- Calendario de cursos y formaciones
+Explora nuestros artículos en el listado a continuación.
 
-[Contacta con nosotros](/contacto) para suscribirte a nuestro boletín.
+Si quieres estar al día, [contacta con nosotros](/contacto) para suscribirte a nuestro boletín.
