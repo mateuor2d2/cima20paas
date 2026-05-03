@@ -10,8 +10,8 @@ site: cima
 
 - **Razón social**: PROJECTES TÈCNICS SL
 - **CIF**: B07947955
-- **Dirección**: Palma de Mallorca, España
-- **Email**: info@cima20.com
+- **Dirección**: C/Pau Piferrer, 8, 07011 Palma (Illes Balears)
+- **Email**: cima20@cima20.com
 
 ## Condiciones de uso
 

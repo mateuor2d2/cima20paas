@@ -180,164 +180,248 @@ useCimaBreadcrumbs([
 
 <template>
   <div>
+    <!-- Page header -->
+    <div class="bg-gradient-to-b from-blue-50 to-white dark:from-neutral-900 dark:to-neutral-950 border-b border-neutral-100 dark:border-neutral-800">
+      <UContainer class="pt-12 pb-6">
+        <h1 class="text-4xl font-bold text-neutral-900 dark:text-white">{{ page?.title || 'Contacto' }}</h1>
+        <p v-if="page?.description" class="mt-3 text-lg text-neutral-500 dark:text-neutral-400 max-w-2xl">{{ page.description }}</p>
+        <div v-if="page?.body" class="prose dark:prose-invert max-w-none mt-4">
+          <ContentRenderer :value="page" />
+        </div>
+      </UContainer>
+    </div>
+
     <UContainer class="py-12">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <!-- Content from Markdown -->
-        <div>
-          <h1 class="text-4xl font-bold mb-4">{{ page?.title || 'Contacto' }}</h1>
-          <div v-if="page?.body" class="prose dark:prose-invert max-w-none">
-            <ContentRenderer :value="page" />
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <!-- Left: Contact Info Sidebar -->
+        <div class="space-y-6">
+          <!-- Address Card -->
+          <div class="p-6 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
+                <UIcon name="i-lucide-map-pin" class="w-5 h-5 text-blue-600 dark:text-blue-400" />
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-neutral-900 dark:text-white mb-1">Dirección</h3>
+                <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">C/Pau Piferrer, 8<br>07011 Palma (Illes Balears)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phone Card -->
+          <div class="p-6 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
+                <UIcon name="i-lucide-phone" class="w-5 h-5 text-blue-600 dark:text-blue-400" />
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-neutral-900 dark:text-white mb-1">Teléfono</h3>
+                <a href="tel:+34971714584" class="text-sm text-blue-600 dark:text-blue-400 hover:underline">971 714 584</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email Card -->
+          <div class="p-6 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
+                <UIcon name="i-lucide-mail" class="w-5 h-5 text-blue-600 dark:text-blue-400" />
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-neutral-900 dark:text-white mb-1">Email</h3>
+                <a href="mailto:cima20@cima20.com" class="text-sm text-blue-600 dark:text-blue-400 hover:underline">cima20@cima20.com</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hours Card -->
+          <div class="p-6 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
+                <UIcon name="i-lucide-clock" class="w-5 h-5 text-blue-600 dark:text-blue-400" />
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-neutral-900 dark:text-white mb-1">Horario</h3>
+                <p class="text-sm text-neutral-500 dark:text-neutral-400">Lunes – Viernes<br>9:00 – 18:00</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Contact Form -->
-        <div class="bg-neutral-50 dark:bg-neutral-900 p-8 rounded-lg border border-neutral-200 dark:border-neutral-800">
-          <h2 class="text-2xl font-semibold mb-6">Formulario de contacto</h2>
-
-          <form @submit.prevent="submitForm" class="space-y-4" novalidate aria-label="Formulario de contacto">
-            <!-- Honeypot — hidden from users, visible to bots -->
-            <div class="absolute -left-[9999px] opacity-0 h-0 w-0 overflow-hidden" aria-hidden="true" tabindex="-1">
-              <label for="website">No rellenar este campo</label>
-              <input
-                id="website"
-                v-model="form.website"
-                type="text"
-                name="website"
-                autocomplete="off"
-                tabindex="-1"
-              />
+        <!-- Right: Contact Form -->
+        <div class="lg:col-span-2 space-y-8">
+          <div class="bg-white dark:bg-neutral-900 p-8 rounded-2xl border border-neutral-200/80 dark:border-neutral-800">
+            <div class="flex items-center gap-3 mb-6 pb-5 border-b border-neutral-100 dark:border-neutral-800">
+              <div class="w-9 h-9 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center">
+                <UIcon name="i-lucide-message-square" class="w-4.5 h-4.5 text-blue-600 dark:text-blue-400" />
+              </div>
+              <h2 class="text-xl font-semibold text-neutral-900 dark:text-white">Formulario de contacto</h2>
             </div>
 
-            <!-- Name -->
-            <div>
-              <label for="name" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
-                Nombre <span class="text-red-500">*</span>
-              </label>
-              <input
-                id="name"
-                v-model="form.name"
-                type="text"
-                required
-                :class="[
-                  'w-full px-4 py-2 rounded-lg border bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white transition-colors',
-                  touched.name && errors.name
-                    ? 'border-red-400 dark:border-red-600 focus:ring-2 focus:ring-red-400'
-                    : 'border-neutral-300 dark:border-neutral-700 focus:ring-2 focus:ring-primary'
-                ]"
-                placeholder="Tu nombre"
-                @blur="onBlur('name')"
-                @input="touched.name && validateField('name')"
-              />
-              <p v-if="touched.name && errors.name" class="mt-1 text-sm text-red-500">
-                {{ errors.name }}
+            <form @submit.prevent="submitForm" class="space-y-4" novalidate aria-label="Formulario de contacto">
+              <!-- Honeypot — hidden from users, visible to bots -->
+              <div class="absolute -left-[9999px] opacity-0 h-0 w-0 overflow-hidden" aria-hidden="true" tabindex="-1">
+                <label for="website">No rellenar este campo</label>
+                <input
+                  id="website"
+                  v-model="form.website"
+                  type="text"
+                  name="website"
+                  autocomplete="off"
+                  tabindex="-1"
+                />
+              </div>
+
+              <!-- Name & Email row -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                    Nombre <span class="text-red-500">*</span>
+                  </label>
+                  <input
+                    id="name"
+                    v-model="form.name"
+                    type="text"
+                    required
+                    :class="[
+                      'w-full px-4 py-2.5 rounded-lg border bg-neutral-50 dark:bg-neutral-800 text-neutral-900 dark:text-white transition-colors',
+                      touched.name && errors.name
+                        ? 'border-red-400 dark:border-red-600 focus:ring-2 focus:ring-red-400'
+                        : 'border-neutral-200 dark:border-neutral-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500'
+                    ]"
+                    placeholder="Tu nombre"
+                    @blur="onBlur('name')"
+                    @input="touched.name && validateField('name')"
+                  />
+                  <p v-if="touched.name && errors.name" class="mt-1 text-sm text-red-500">
+                    {{ errors.name }}
+                  </p>
+                </div>
+
+                <div>
+                  <label for="email" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                    Email <span class="text-red-500">*</span>
+                  </label>
+                  <input
+                    id="email"
+                    v-model="form.email"
+                    type="email"
+                    required
+                    :class="[
+                      'w-full px-4 py-2.5 rounded-lg border bg-neutral-50 dark:bg-neutral-800 text-neutral-900 dark:text-white transition-colors',
+                      touched.email && errors.email
+                        ? 'border-red-400 dark:border-red-600 focus:ring-2 focus:ring-red-400'
+                        : 'border-neutral-200 dark:border-neutral-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500'
+                    ]"
+                    placeholder="tu@email.com"
+                    @blur="onBlur('email')"
+                    @input="touched.email && validateField('email')"
+                  />
+                  <p v-if="touched.email && errors.email" class="mt-1 text-sm text-red-500">
+                    {{ errors.email }}
+                  </p>
+                </div>
+              </div>
+
+              <!-- Phone & Subject row -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="phone" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                    Teléfono
+                  </label>
+                  <input
+                    id="phone"
+                    v-model="form.phone"
+                    type="tel"
+                    :class="[
+                      'w-full px-4 py-2.5 rounded-lg border bg-neutral-50 dark:bg-neutral-800 text-neutral-900 dark:text-white transition-colors',
+                      touched.phone && errors.phone
+                        ? 'border-red-400 dark:border-red-600 focus:ring-2 focus:ring-red-400'
+                        : 'border-neutral-200 dark:border-neutral-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500'
+                    ]"
+                    placeholder="+34 971 714 584"
+                    @blur="onBlur('phone')"
+                    @input="touched.phone && validateField('phone')"
+                  />
+                  <p v-if="touched.phone && errors.phone" class="mt-1 text-sm text-red-500">
+                    {{ errors.phone }}
+                  </p>
+                </div>
+
+                <div>
+                  <label for="subject" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                    Asunto
+                  </label>
+                  <input
+                    id="subject"
+                    v-model="form.subject"
+                    type="text"
+                    class="w-full px-4 py-2.5 rounded-lg border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-neutral-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                    placeholder="¿Sobre qué nos quieres consultar?"
+                  />
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div>
+                <label for="message" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                  Mensaje <span class="text-red-500">*</span>
+                </label>
+                <textarea
+                  id="message"
+                  v-model="form.message"
+                  required
+                  rows="5"
+                  :class="[
+                    'w-full px-4 py-2.5 rounded-lg border bg-neutral-50 dark:bg-neutral-800 text-neutral-900 dark:text-white transition-colors resize-vertical',
+                    touched.message && errors.message
+                      ? 'border-red-400 dark:border-red-600 focus:ring-2 focus:ring-red-400'
+                      : 'border-neutral-200 dark:border-neutral-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500'
+                  ]"
+                  placeholder="Escribe tu mensaje aquí..."
+                  @blur="onBlur('message')"
+                  @input="touched.message && validateField('message')"
+                ></textarea>
+                <p v-if="touched.message && errors.message" class="mt-1 text-sm text-red-500">
+                  {{ errors.message }}
+                </p>
+              </div>
+
+              <!-- Submit -->
+              <UButton
+                type="submit"
+                block
+                size="lg"
+                :loading="loading"
+                :disabled="loading"
+                icon="i-heroicons-paper-airplane"
+                class="mt-2"
+              >
+                {{ loading ? 'Enviando...' : 'Enviar mensaje' }}
+              </UButton>
+
+              <p class="text-xs text-neutral-500 dark:text-neutral-400 text-center mt-2">
+                Los campos marcados con <span class="text-red-500">*</span> son obligatorios
               </p>
-            </div>
+            </form>
+          </div>
 
-            <!-- Email -->
-            <div>
-              <label for="email" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
-                Email <span class="text-red-500">*</span>
-              </label>
-              <input
-                id="email"
-                v-model="form.email"
-                type="email"
-                required
-                :class="[
-                  'w-full px-4 py-2 rounded-lg border bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white transition-colors',
-                  touched.email && errors.email
-                    ? 'border-red-400 dark:border-red-600 focus:ring-2 focus:ring-red-400'
-                    : 'border-neutral-300 dark:border-neutral-700 focus:ring-2 focus:ring-primary'
-                ]"
-                placeholder="tu@email.com"
-                @blur="onBlur('email')"
-                @input="touched.email && validateField('email')"
-              />
-              <p v-if="touched.email && errors.email" class="mt-1 text-sm text-red-500">
-                {{ errors.email }}
-              </p>
-            </div>
-
-            <!-- Phone -->
-            <div>
-              <label for="phone" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
-                Teléfono
-              </label>
-              <input
-                id="phone"
-                v-model="form.phone"
-                type="tel"
-                :class="[
-                  'w-full px-4 py-2 rounded-lg border bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white transition-colors',
-                  touched.phone && errors.phone
-                    ? 'border-red-400 dark:border-red-600 focus:ring-2 focus:ring-red-400'
-                    : 'border-neutral-300 dark:border-neutral-700 focus:ring-2 focus:ring-primary'
-                ]"
-                placeholder="+34 123 456 789"
-                @blur="onBlur('phone')"
-                @input="touched.phone && validateField('phone')"
-              />
-              <p v-if="touched.phone && errors.phone" class="mt-1 text-sm text-red-500">
-                {{ errors.phone }}
-              </p>
-            </div>
-
-            <!-- Subject -->
-            <div>
-              <label for="subject" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
-                Asunto
-              </label>
-              <input
-                id="subject"
-                v-model="form.subject"
-                type="text"
-                class="w-full px-4 py-2 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white focus:ring-2 focus:ring-primary transition-colors"
-                placeholder="¿Sobre qué nos quieres consultar?"
+          <!-- Map Placeholder -->
+          <div class="rounded-2xl border border-neutral-200/80 dark:border-neutral-800 overflow-hidden bg-neutral-100 dark:bg-neutral-900">
+            <div class="relative w-full h-64 md:h-80 flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100 dark:from-neutral-800 dark:to-neutral-900">
+              <div class="text-center">
+                <div class="w-14 h-14 rounded-2xl bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center mx-auto mb-3">
+                  <UIcon name="i-lucide-map" class="w-7 h-7 text-blue-600 dark:text-blue-400" />
+                </div>
+                <p class="text-sm font-medium text-neutral-600 dark:text-neutral-400">C/Pau Piferrer, 8 · 07011 Palma</p>
+                <p class="text-xs text-neutral-400 dark:text-neutral-500 mt-1">Illes Balears</p>
+              </div>
+              <!-- Subtle grid pattern -->
+              <div class="absolute inset-0 opacity-[0.04]" aria-hidden="true"
+                style="background-image: radial-gradient(circle, #2563eb 1px, transparent 1px); background-size: 24px 24px;"
               />
             </div>
-
-            <!-- Message -->
-            <div>
-              <label for="message" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
-                Mensaje <span class="text-red-500">*</span>
-              </label>
-              <textarea
-                id="message"
-                v-model="form.message"
-                required
-                rows="5"
-                :class="[
-                  'w-full px-4 py-2 rounded-lg border bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white transition-colors resize-vertical',
-                  touched.message && errors.message
-                    ? 'border-red-400 dark:border-red-600 focus:ring-2 focus:ring-red-400'
-                    : 'border-neutral-300 dark:border-neutral-700 focus:ring-2 focus:ring-primary'
-                ]"
-                placeholder="Escribe tu mensaje aquí..."
-                @blur="onBlur('message')"
-                @input="touched.message && validateField('message')"
-              ></textarea>
-              <p v-if="touched.message && errors.message" class="mt-1 text-sm text-red-500">
-                {{ errors.message }}
-              </p>
-            </div>
-
-            <!-- Submit -->
-            <UButton
-              type="submit"
-              block
-              size="lg"
-              :loading="loading"
-              :disabled="loading"
-              icon="i-heroicons-paper-airplane"
-              class="mt-2"
-            >
-              {{ loading ? 'Enviando...' : 'Enviar mensaje' }}
-            </UButton>
-
-            <p class="text-xs text-neutral-500 dark:text-neutral-400 text-center mt-2">
-              Los campos marcados con <span class="text-red-500">*</span> son obligatorios
-            </p>
-          </form>
+          </div>
         </div>
       </div>
     </UContainer>
