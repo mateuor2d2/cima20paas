@@ -1,5 +1,5 @@
 site: cima
-name: PROJECTES TÈCNICS SL
+name: CIMA 20
 tagline: Seguridad, Prevención, Medio Ambiente y Calidad
 theme: cima
 primaryColor: blue
@@ -40,7 +40,7 @@ navigation:
   - label: Contacto
     to: /contacto
 footer:
-  text: © PROJECTES TÈCNICS SL - Todos los derechos reservados
+  text: © CIMA 20 - Todos los derechos reservados
   links:
     - label: Aviso Legal
       to: /aviso-legal

@@ -59,9 +59,9 @@ describe('Integration: Routes & SSR', () => {
       expect(status).toBe(200)
     })
 
-    it('contains site name PROJECTES', async () => {
+    it('contains site name CIMA 20', async () => {
       const { html } = await fetchPage('/')
-      expect(html).toContain('PROJECTES')
+      expect(html).toContain('CIMA 20')
     })
 
     it('has proper HTML structure', async () => {

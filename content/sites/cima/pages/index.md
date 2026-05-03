@@ -1,11 +1,11 @@
 ---
 title: Inicio
-description: PROJECTES TÈCNICS SL - Seguridad, Prevención, Medio Ambiente y Calidad
+description: CIMA 20 - Seguridad, Prevención, Medio Ambiente y Calidad
 site: cima
 hero: true
 ---
 
-# Bienvenidos a PROJECTES TÈCNICS SL
+# Bienvenidos a CIMA 20
 
 Somos una empresa especializada en **Seguridad**, **Prevención de Riesgos Laborales**, **Medio Ambiente** y **Calidad**, ofreciendo soluciones integrales para empresas de todos los sectores.
 
