@@ -1,24 +1,35 @@
 ---
 title: Contacto
-description: Contacta con PROJECTES TÈCNICS SL
+description: Contacta con CIMA 20 — centro de Palma, Illes Balears
 site: cima
 ---
 
 # Contacto
 
-## ¿Necesitas más información?
+## Nuestro centro
 
-Estamos a tu disposición para resolver cualquier duda o proporcionarte un presupuesto sin compromiso.
+**Pau Piferrer, 8**
+07011 Palma, Illes Balears
 
-### Datos de contacto
+**Lunes a Viernes:**
+7:30h a 15:00h
 
-- **Email**: info@cima20.com
-- **Teléfono**: +34 971 123 456
-- **Dirección**: Carrer de l'Empresa, 123, 07009 Palma, Illes Balears
+## Contacto
 
-### Horario de atención
+- **TELÉFONO:** 971 71 45 84
+- **CORREO ELECTRÓNICO:** administracion@cima20.com
 
-- Lunes a Viernes: 8:00 - 17:00
-- Sábados y Domingos: Cerrado
+---
 
-Rellena el formulario y nos pondremos en contacto contigo lo antes posible.
+## Queremos escuchar tus necesidades
+
+Ponte en contacto con nosotros para:
+
+- Consulta general
+- Solicitar una cita
+- Solicitar un presupuesto
+- Quiero trabajar con vosotros
+
+---
+
+*Responsable del tratamiento: CIMA 20 PROYECTOS TÉCNICOS, SL. Dirección: C/. Pau Piferrer,8, CP 07011, Palma de Mallorca (Balears (Illes)). Sus datos serán usados para poder atender sus solicitudes y prestarle nuestros servicios. Más información en la [Política de privacidad](/politica-privacidad).*

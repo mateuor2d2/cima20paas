@@ -1,145 +1,80 @@
 ---
-title: Gestión de Normativas ISO
-description: Implementación y certificación de sistemas de gestión ISO 9001, ISO 14001 e ISO 45001
+title: Gestión de normativas ISO (9001, 14001, 45001)
+description: Asesoramiento, implantación y auditoría de sistemas de gestión ISO
 site: cima
 ---
 
-# Gestión de Normativas ISO
+# Gestión de normativas ISO (9001, 14001, 45001)
 
-## Certifica la excelencia de tu organización
+## ¿Qué es un sistema de gestión y en qué puede ayudar a una empresa?
 
-Las normas ISO son estándares internacionales reconocidos en todo el mundo que demuestran el compromiso de tu empresa con la **calidad**, el **medio ambiente** y la **seguridad**. En CIMA 20 te acompañamos en todo el proceso de implementación, certificación y mantenimiento.
+Para hacer frente a la gran competencia comercial poseer una buena infraestructura de calidad tendrá un papel decisivo para ayudar a las organizaciones a cumplir los requisitos del mercado y poderlo demostrar a través de sus certificaciones ISO, que además le aportan reconocimiento internacional.
 
----
+### La acreditación
 
-## ¿Por qué certificarse?
-
-- **Mejora la imagen** corporativa y la confianza de clientes
-- **Abre nuevos mercados** — Muchos contratos públicos y privados exigen certificación
-- **Optimiza procesos** — Reduce ineficiencias y costes operativos
-- **Reduce riesgos** — Identifica y controla los riesgos de forma sistemática
-- **Cumplimiento legal** — Asegura el cumplimiento de la normativa aplicable
-- **Mejora continua** — Establece un ciclo de mejora permanente (PDCA)
+- Garantiza el correcto funcionamiento de los sistemas de evaluación de la conformidad.
+- Asegura que los resultados son fiables
+- Permite acceder a nuevos mercados
+- Contribuye a reducir los costes de fabricación, exportación, servicios...
+- Se basa en criterios de normas internacionales
+- Permite a las organizaciones detectar áreas de riesgos y mejoras.
 
 ---
 
-## ISO 9001 — Sistema de Gestión de la Calidad
+### UNE-EN ISO 9001:2015
 
-La norma **ISO 9001** establece los requisitos para un sistema de gestión de la calidad (SGC) que demuestre la capacidad de la organización para proporcionar productos y servicios que cumplan con los requisitos del cliente y los reglamentarios.
+Mediante la aplicación de esta norma la empresa puede establecer los requisitos para que su sistema de Calidad:
 
-### Beneficios
+- Demuestre su capacidad para promocionar de manera coherente servicios que satisfagan los requisitos del cliente y los reglamentos aplicables
+- Aumente la satisfacción del cliente a través de la aplicación eficaz del Sistema, incluidos los procesos para la mejora continua y aseguramiento de la conformidad con los requisitos del cliente
 
-- Satisfacción del cliente mejorada
-- Procesos estandarizados y documentados
-- Reducción de errores y retrabajos
-- Mayor coherencia en la calidad del producto/servicio
-- Mejora de la comunicación interna
+### UNE-EN ISO 14001:2015
 
-### Nuestro servicio
+Con la implementación de esta norma la empresa mejora su sistema de gestión ambiental:
 
-- Diagnóstico inicial (gap analysis)
-- Diseño del sistema de gestión
-- Redacción de documentación (manual de calidad, procedimientos, instrucciones, registros)
-- Formación del equipo
-- Auditorías internas
-- Preparación para la auditoría de certificación
-- Mantenimiento y mejora continua
+- Ayudando a minimizar el impacto ambiental y frenando el cambio climático
+- Reduciendo el consumo de Energía minimizando el gasto de recursos naturales y la generación de residuos
 
----
+### UNE-EN ISO 45001:2023
 
-## ISO 14001 — Sistema de Gestión Ambiental
+La instauración de esta norma busca mejorar la seguridad y salud en el trabajo:
 
-La norma **ISO 14001** especifica los requisitos para un sistema de gestión ambiental (SGA) que permita a la organización desarrollar e implementar una política y objetivos que tengan en cuenta los requisitos legales y la información sobre los aspectos ambientales significativos.
-
-### Beneficios
-
-- Reducción del impacto ambiental
-- Ahorro de energía y recursos
-- Cumplimiento de la legislación ambiental
-- Mejora de las relaciones con la comunidad y stakeholders
-- Acceso a incentivos y subvenciones ambientales
-
-### Nuestro servicio
-
-- Evaluación de aspectos e impactos ambientales
-- Diseño del SGA
-- Elaboración de la política ambiental
-- Programas de gestión de residuos, energía y agua
-- Auditorías de cumplimiento legal
-- Formación ambiental
-- Preparación para certificación
+- Gestionando la seguridad y salud en el trabajo protegiendo la integridad física de los trabajadores
+- Reduciendo los accidentes laborales mejorando las condiciones en el trabajo cumpliendo con la legislación laboral
 
 ---
 
-## ISO 45001 — Seguridad y Salud en el Trabajo
+## Asesoramiento
 
-La norma **ISO 45001** establece los requisitos para un sistema de gestión de la seguridad y salud en el trabajo (SST) que permita proporcionar lugares de trabajo seguros y saludables, previniendo lesiones y enfermedades relacionadas con el trabajo.
-
-### Beneficios
-
-- Reducción de accidentes y enfermedades profesionales
-- Menor absentismo laboral
-- Cumplimiento de la legislación de PRL
-- Mejora del clima laboral
-- Reducción de primas de seguro
-- Imagen de empresa responsable
-
-### Nuestro servicio
-
-- Evaluación de riesgos laborales integrada con el sistema
-- Diseño del sistema SST
-- Integración con la prevención de riesgos laborales existente
-- Auditorías internas de seguridad
-- Indicadores de rendimiento (KPIs) de seguridad
-- Preparación para certificación
+CIMA 20 le proporciona asesoramiento acerca de las diferentes ISO con las que acreditarse, ayudándole a discernir cuál o cuáles se ajustarán mejor a su organización.
 
 ---
 
-## Integración de sistemas (Sistema Integrado de Gestión)
+## Implantación y documentación
 
-Las tres normas comparten una **estructura común** (Anexo SL de ISO) que facilita su integración en un único Sistema Integrado de Gestión (SIG):
+Le ayudamos en la preparación y corrección de toda su documentación para conseguir la acreditación elegida, para ello:
 
-- **Política integrada** — Calidad + Medio Ambiente + Seguridad
-- **Gestión de riesgos** — Un único enfoque para todos los riesgos
-- **Documentación compartida** — Menos papeleo, más eficiencia
-- **Auditorías conjuntas** — Optimización de recursos
-- **Mejora continua unificada** — Ciclo PDCA integrado
-
-Implementar un sistema integrado reduce los costes de certificación hasta un **30-40%** respecto a certificar cada norma por separado.
-
----
-
-## Nuestro proceso de implementación
-
-### Fase 1: Diagnóstico (2-4 semanas)
-- Análisis de la situación actual
-- Identificación de brechas (gap analysis)
-- Planificación del proyecto con calendario
-
-### Fase 2: Diseño (4-8 semanas)
-- Definición de la política y objetivos
-- Diseño del sistema de gestión
-- Elaboración de documentación
-- Identificación de riesgos y oportunidades
-
-### Fase 3: Implantación (4-12 semanas)
-- Formación del equipo
-- Puesta en marcha del sistema
-- Primer ciclo de auditorías internas
-- Revisión por la dirección
-
-### Fase 4: Certificación (4-8 semanas)
-- Selección del organismo de certificación
-- Auditoría de certificación (fase 1 documental + fase 2 in situ)
-- Resolución de no conformidades
-- Obtención del certificado
-
-### Fase 5: Mantenimiento (continuo)
-- Auditorías internas periódicas
-- Revisión por la dirección anual
-- Actualización del sistema
-- Auditorías de seguimiento del organismo certificador
+- Realizaremos reuniones con la directiva y con todo el personal implicado para poder realizar una documentación que se ajuste a su empresa en el proceso de acreditación.
+- Desarrollaremos su política de calidad, ambiental, de Seguridad en el trabajo o de su sistema integrado de gestión.
+- Se impartirán cursos de normativa a los diferentes niveles de la empresa para que puedan entender la importancia de los sistemas de gestión.
+- Se elaborará toda la documentación del sistema integrado de gestión: Manual, Procedimientos, Instrucciones de trabajo, diferente información documentada...
+- Se ayudará a recopilar y gestionar las normativas de cumplimiento.
+- Les ayudaremos a elaborar planes de formación y perfiles de cualificación.
+- Elaboraremos encuestas de satisfacción del cliente adaptadas a la empresa y las evaluaremos.
+- Realizaremos la Auditoría interna para comprobar que el sistema está bien implantado y es manejado correctamente por todo el personal de la empresa.
+- Si es necesario, le ayudaremos a contactar con la entidad certificadora adecuada para realizar la auditoría externa, en la cual estaremos presentes.
 
 ---
 
-[Contacta con nosotros](/contacto) para comenzar el camino hacia la certificación ISO de tu empresa.
+## Auditorías internas
+
+Si ya posee un sistema de gestión y necesita de asesoramiento o de auditoría interna, de implantación o seguimiento, le ofrecemos este servicio según las necesidades de su organización.
+
+---
+
+## Otras acreditaciones en las que podemos ayudarles
+
+- **UNE-EN ISO 17020:** Criterios generales para el funcionamiento de diferentes tipos de organismos que realizan la inspección.
+- **UNE-EN ISO 17025:** Calidad en laboratorios de ensayo y acreditación.
+
+Para ambas normas podemos asesorarles en la documentación general del Sistema Integrado de gestión.

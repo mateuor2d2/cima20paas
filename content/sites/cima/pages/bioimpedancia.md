@@ -1,98 +1,46 @@
 ---
 title: Bioimpedancia
-description: Análisis de composición corporal por bioimpedancia eléctrica para la vigilancia de la salud laboral
+description: Herramienta esencial para la salud laboral y el bienestar individual
 site: cima
 ---
 
 # Bioimpedancia
 
-## Conoce tu cuerpo por dentro
+Es una herramienta esencial para la salud laboral y el bienestar individual.
 
-La **bioimpedancia eléctrica (BIA)** es una técnica no invasiva, rápida y precisa que permite evaluar la composición corporal de forma detallada. En CIMA 20 la incorporamos como herramienta complementaria en nuestros programas de vigilancia de la salud.
+La bioimpedancia es una prueba rápida, indolora y no invasiva que permite conocer con precisión la composición corporal de cada persona. A través de una pequeña corriente eléctrica imperceptible, se obtiene información detallada sobre:
 
----
-
-## ¿Qué es la bioimpedancia?
-
-La BIA consiste en la medición de la **resistencia que ofrece el cuerpo al paso de una corriente eléctrica de muy baja intensidad** (imperceptible y totalmente segura). Dado que los diferentes tejidos del cuerpo (músculo, grasa, hueso, agua) tienen distinta conductividad eléctrica, esta técnica permite calcular con precisión:
-
-- La cantidad y distribución de la **masa grasa**
-- La cantidad y distribución de la **masa muscular**
-- El contenido de **agua corporal** total e intracelular/extracelular
-- El **metabolismo basal** — calorías que el cuerpo consume en reposo
-
-La prueba dura apenas **2-3 minutos** y no requiere preparación especial.
+- **Masa muscular:** nivel de fuerza y desarrollo físico.
+- **Grasa corporal:** porcentaje y distribución en el organismo.
+- **Agua corporal:** tanto intra como extracelular, clave para evaluar el estado de hidratación.
+- **Metabolismo basal:** calorías que el cuerpo quema en reposo.
+- **Índice de masa magra y grasa visceral**, factores muy relevantes en la prevención de enfermedades.
 
 ---
 
-## ¿Qué medimos?
+## Aplicaciones en la empresa y en la salud laboral
 
-### Composición corporal completa
-
-- **Masa grasa** — Porcentaje total y distribución segmental (brazos, tronco, piernas)
-- **Masa muscular** — En kg y porcentaje, por segmentos corporales
-- **Agua corporal total** — Hidratación general y equilibrio intra/extracelular
-- **Índice de masa corporal (IMC)** — Relación peso/talla
-- **Metabolismo basal** — Calorías consumidas en reposo (kcal/día)
-- **Ratio cintura/cadera** — Indicador de riesgo cardiovascular
-- **Masa ósea estimada** — Minerales óseos
-
-### Parámetros avanzados
-
-- **Ángulo de fase** — Indicador de estado nutricional y salud celular
-- **Balancia hídrica** — Detección de retención de líquidos o deshidratación
-- **Análisis segmental** — Composición por cada extremidad y tronco
+- **Prevención de riesgos asociados al sobrepeso y sedentarismo:** detecta desequilibrios que pueden derivar en problemas cardiovasculares, metabólicos o musculoesqueléticos.
+- **Seguimiento de programas de empresa saludable:** permite evaluar la eficacia de campañas de ejercicio físico, alimentación saludable y control del estrés.
+- **Motivación de los trabajadores:** recibir datos objetivos y personalizados sobre su estado físico impulsa el compromiso con hábitos saludables.
+- **Reducción del absentismo laboral:** al mejorar la salud y el bienestar, disminuyen las bajas relacionadas con dolencias prevenibles.
 
 ---
 
-## Aplicaciones en salud laboral
+## Beneficios para particulares
 
-### Evaluación de riesgo cardiovascular
-
-La bioimpedancia permite identificar trabajadores con:
-
-- Sobrepeso u obesidad (exceso de masa grasa)
-- Distribución android de la grasa (riesgo cardiovascular elevado)
-- Baja masa muscular (sarcopenia)
-- Desequilibrio hídrico
-
-### Vigilancia de la salud
-
-- **Control de peso** en programas de promoción de la salud
-- **Seguimiento nutricional** personalizado
-- **Detección precoz** de desnutrición o sarcopenia
-- **Evaluación antes/después** de programas de ejercicio laboral
-
-### Programas Empresa Saludable
-
-La bioimpedancia es una herramienta ideal para los [programas de Empresa Saludable](/asesoria):
-
-- Estudio basal de la composición corporal del equipo
-- Objetivos personalizados para cada trabajador
-- Seguimiento periódico para medir la evolución
-- Informes agregados para la empresa
+- Control del peso y la grasa corporal con mayor precisión que una báscula convencional.
+- Orientación para deportistas y personas que quieren mejorar su rendimiento físico.
+- Herramienta de apoyo en dietas y programas de nutrición.
+- Seguimiento en procesos de recuperación o reincorporación laboral tras una baja prolongada.
 
 ---
 
-## ¿Cómo se realiza la prueba?
+## Ventajas de la bioimpedancia frente a otras pruebas
 
-1. **Preparación** — El trabajador se quita zapatos, calcetines y objetos metálicos. Se acuesta en camilla.
-2. **Colocación de electrodos** — Se colocan 4 electrodos adhesivos (2 en manos, 2 en pies).
-3. **Medición** — El equipo emite una corriente imperceptible y mide la resistencia. Dura 30-60 segundos.
-4. **Resultado inmediato** — El software genera un informe completo con todos los parámetros.
-5. **Asesoramiento** — Nuestro equipo sanitario interpreta los resultados y ofrece recomendaciones.
+- Resultados inmediatos y fáciles de interpretar.
+- Sin efectos secundarios ni preparación especial.
+- Posibilidad de repetición periódica para llevar un control evolutivo.
+- Puede integrarse dentro de reconocimientos médicos o programas de salud corporativa.
 
----
-
-## Informe personalizado
-
-Cada trabajador recibe un informe detallado con:
-
-- Valores absolutos y porcentuales de cada parámetro
-- Comparación con los rangos de normalidad por edad y sexo
-- Gráficos visuales de composición corporal
-- Recomendaciones personalizadas de nutrición y ejercicio
-
----
-
-[Contacta con nosotros](/contacto) para incorporar la bioimpedancia a tus programas de salud laboral.
+En CIMA20 incorporamos la bioimpedancia como parte de nuestros servicios de **Empresa Saludable** y **Vigilancia de la Salud**, porque creemos que **conocer el estado real del cuerpo es el primer paso para cuidarlo**.
