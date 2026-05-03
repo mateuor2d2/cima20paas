@@ -16,6 +16,7 @@ export default defineNuxtConfig({
   css: [
     '~/assets/css/tailwind.css',
     '~/assets/css/a11y.css',
+    '~/assets/css/saas.css',
   ],
   components: [
     // Base components: site/, blog/, content/ → SiteHeader, BlogSidebar, etc.

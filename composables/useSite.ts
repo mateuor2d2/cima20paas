@@ -11,6 +11,7 @@ export function useSite() {
       'cima20.com': 'cima',
       'localhost': 'cima',
       '127.0.0.1': 'cima',
+      '89.167.58.18': 'cima',
     }
     return map[normalizedHost] || 'default'
   })
