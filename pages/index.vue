@@ -1,6 +1,6 @@
 <script setup>
 /**
- * Homepage — Professional landing page for CIMA20 / PROJECTES TÈCNICS SL.
+ * Homepage — Professional landing page for CIMA20 / CIMA 20.
  * Sections: Hero (CimaHero), Services Grid, Stats, Why Choose Us, CTA Banner.
  */
 const { siteId } = useSite()
@@ -16,12 +16,12 @@ const { data: siteConfig } = await useAsyncData(`config-${siteId.value}`, () => 
 })
 
 useSeoMeta({
-  title: page.value?.title || 'PROJECTES TÈCNICS SL',
+  title: page.value?.title || 'CIMA 20',
   description: page.value?.description || 'Seguridad, Prevención, Medio Ambiente y Calidad'
 })
 
 defineOgImage({
-  title: page.value?.title || 'PROJECTES TÈCNICS SL',
+  title: page.value?.title || 'CIMA 20',
   description: page.value?.description || 'Seguridad, Prevención, Medio Ambiente y Calidad',
 })
 
@@ -115,7 +115,7 @@ const features = [
 <template>
   <div>
     <!-- Hero Section -->
-    <CimaHero :page="page || { title: 'PROJECTES TÈCNICS SL', description: 'Seguridad, Prevención, Medio Ambiente y Calidad' }" />
+    <CimaHero :page="page || { title: 'CIMA 20', description: 'Seguridad, Prevención, Medio Ambiente y Calidad' }" />
 
     <!-- Services Grid Section -->
     <section class="saas-fade-in py-20 md:py-28 bg-white dark:bg-neutral-950" aria-label="Servicios">

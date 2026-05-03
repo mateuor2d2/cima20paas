@@ -16,7 +16,7 @@ const siteName = computed(() => siteConfig.value?.name || 'CIMA')
 <template>
   <header role="banner" class="bg-white dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800">
     <UContainer class="flex items-center justify-between h-16">
-      <NuxtLink to="/" class="flex items-center gap-2" aria-label="PROJECTES TÈCNICS SL - Inicio">
+      <NuxtLink to="/" class="flex items-center gap-2" aria-label="CIMA 20 - Inicio">
         <span class="text-xl font-bold text-primary">{{ siteName }}</span>
       </NuxtLink>
       <nav aria-label="Navegación principal" class="hidden md:flex items-center gap-6">

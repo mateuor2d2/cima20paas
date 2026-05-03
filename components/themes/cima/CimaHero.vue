@@ -1,6 +1,6 @@
 <script setup>
 /**
- * CimaHero — Premium hero for CIMA20 / PROJECTES TÈCNICS SL.
+ * CimaHero — Premium hero for CIMA20 / CIMA 20.
  * Full-width animated gradient with mesh overlay, decorative shapes, gradient text, dual CTAs.
  */
 const props = defineProps({

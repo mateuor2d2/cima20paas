@@ -35,7 +35,7 @@ function handleSearch() {
 }
 
 useSeoMeta({
-  title: `${errorTitle.value} | PROJECTES TÈCNICS SL`,
+  title: `${errorTitle.value} | CIMA 20`,
   description: errorMessage.value,
 })
 </script>

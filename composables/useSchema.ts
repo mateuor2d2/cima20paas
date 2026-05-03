@@ -8,7 +8,7 @@ import { useSchemaOrg, defineOrganization, defineLocalBusiness, defineArticle, d
 export function useCimaOrganization() {
   useSchemaOrg([
     defineOrganization({
-      name: 'PROJECTES TÈCNICS SL',
+      name: 'CIMA 20',
       description: 'Seguridad, Prevención de Riesgos Laborales, Medio Ambiente y Calidad',
       url: 'https://www.cima20.com',
       logo: 'https://www.cima20.com/logo.png',
@@ -35,7 +35,7 @@ export function useCimaOrganization() {
 export function useCimaLocalBusiness() {
   useSchemaOrg([
     defineLocalBusiness({
-      name: 'PROJECTES TÈCNICS SL',
+      name: 'CIMA 20',
       description: 'Servicios de Seguridad, Prevención de Riesgos Laborales, Medio Ambiente y Calidad',
       url: 'https://www.cima20.com',
       logo: 'https://www.cima20.com/logo.png',
@@ -60,10 +60,10 @@ export function useCimaArticle(title: string, description: string, date: string,
       headline: title,
       description: description,
       datePublished: date,
-      author: author ? { name: author } : { name: 'PROJECTES TÈCNICS SL' },
+      author: author ? { name: author } : { name: 'CIMA 20' },
       image: image || 'https://www.cima20.com/logo.png',
       publisher: {
-        name: 'PROJECTES TÈCNICS SL',
+        name: 'CIMA 20',
         logo: 'https://www.cima20.com/logo.png',
       },
     }),

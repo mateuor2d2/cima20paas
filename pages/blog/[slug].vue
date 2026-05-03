@@ -41,7 +41,7 @@ const formattedDate = computed(() => {
 })
 
 useSeoMeta({
-  title: post.value?.title || 'Blog | PROJECTES TÈCNICS SL',
+  title: post.value?.title || 'Blog | CIMA 20',
   description: post.value?.description || 'Noticias y artículos sobre prevención de riesgos laborales y salud ocupacional'
 })
 

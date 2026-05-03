@@ -24,13 +24,13 @@ const posts = computed(() => {
 })
 
 useSeoMeta({
-  title: currentPage.value > 1 ? `Blog (página ${currentPage.value}) | PROJECTES TÈCNICS SL` : 'Blog | PROJECTES TÈCNICS SL',
+  title: currentPage.value > 1 ? `Blog (página ${currentPage.value}) | CIMA 20` : 'Blog | CIMA 20',
   description: 'Noticias y artículos sobre prevención de riesgos laborales y salud ocupacional'
 })
 
 // Dynamic OG Image for blog listing
 defineOgImage({
-  title: 'Blog | PROJECTES TÈCNICS SL',
+  title: 'Blog | CIMA 20',
   description: 'Noticias y artículos sobre prevención de riesgos laborales y salud ocupacional',
 })
 

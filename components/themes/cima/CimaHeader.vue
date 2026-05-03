@@ -14,7 +14,7 @@ const { data: siteConfig } = await useAsyncData(`config-header-${siteId.value}`,
 })
 
 const navItems = computed(() => siteConfig.value?.navigation || [])
-const siteName = computed(() => siteConfig.value?.name || 'PROJECTES TÈCNICS SL')
+const siteName = computed(() => siteConfig.value?.name || 'CIMA 20')
 const mobileNavItems = computed(() => {
   const items = /** @type {Array<{label:string,to:string,isChild:boolean}>} */ ([])
   for (const item of navItems.value) {
@@ -56,7 +56,7 @@ watch(() => route.path, () => { mobileMenuOpen.value = false })
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 lg:h-[72px]">
         <!-- Logo / Brand -->
-        <NuxtLink to="/" class="flex items-center gap-3 group" aria-label="PROJECTES TÈCNICS SL - Inicio">
+        <NuxtLink to="/" class="flex items-center gap-3 group" aria-label="CIMA 20 - Inicio">
           <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center text-white font-bold text-sm shadow-sm shadow-blue-600/20 group-hover:shadow-md group-hover:shadow-blue-600/30 group-hover:scale-105 transition-all duration-300">
             PT
           </div>

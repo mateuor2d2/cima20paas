@@ -33,7 +33,7 @@ defineProps({
         <span class="text-4xl font-bold text-white">C</span>
       </div>
       <div>
-        <div class="text-2xl font-bold text-white">PROJECTES TÈCNICS SL</div>
+        <div class="text-2xl font-bold text-white">CIMA 20</div>
         <div class="text-base text-blue-200">Seguretat · Prevenció · Medi Ambient · Qualitat</div>
       </div>
     </div>

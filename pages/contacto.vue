@@ -167,7 +167,7 @@ async function submitForm() {
 
 useSeoMeta({
   title: page.value?.title || 'Contacto',
-  description: page.value?.description || 'Contacta con PROJECTES TÈCNICS SL'
+  description: page.value?.description || 'Contacta con CIMA 20'
 })
 
 // Structured data: LocalBusiness on contact page

@@ -31,7 +31,7 @@ const tagName = computed(() => {
 })
 
 useSeoMeta({
-  title: `Tag: ${tagName.value} | Blog | PROJECTES TÈCNICS SL`,
+  title: `Tag: ${tagName.value} | Blog | CIMA 20`,
   description: `Artículos etiquetados con "${tagName.value}"`
 })
 

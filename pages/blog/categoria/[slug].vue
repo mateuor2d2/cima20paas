@@ -27,7 +27,7 @@ const categoryName = computed(() => {
 })
 
 useSeoMeta({
-  title: `Categoría: ${categoryName.value} | Blog | PROJECTES TÈCNICS SL`,
+  title: `Categoría: ${categoryName.value} | Blog | CIMA 20`,
   description: `Artículos en la categoría ${categoryName.value}`
 })
 

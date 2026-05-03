@@ -56,7 +56,7 @@ function flattenNavItems(items: NavItem[]): { label: string; to: string }[] {
 describe('Navigation config parsing', () => {
   const sampleConfig: SiteConfig = {
     site: 'cima',
-    name: 'PROJECTES TÈCNICS SL',
+    name: 'CIMA 20',
     tagline: 'Seguridad, Prevención, Medio Ambiente y Calidad',
     theme: 'cima',
     primaryColor: 'blue',
@@ -76,7 +76,7 @@ describe('Navigation config parsing', () => {
       { label: 'Contacto', to: '/contacto' },
     ],
     footer: {
-      text: '© PROJECTES TÈCNICS SL - Todos los derechos reservados',
+      text: '© CIMA 20 - Todos los derechos reservados',
       links: [
         { label: 'Aviso Legal', to: '/aviso-legal' },
         { label: 'Privacidad', to: '/privacidad' },
@@ -119,7 +119,7 @@ describe('Navigation config parsing', () => {
 
   describe('extractFooterText', () => {
     it('extracts footer text from config', () => {
-      expect(extractFooterText(sampleConfig)).toBe('© PROJECTES TÈCNICS SL - Todos los derechos reservados')
+      expect(extractFooterText(sampleConfig)).toBe('© CIMA 20 - Todos los derechos reservados')
     })
 
     it('returns empty string for null config', () => {

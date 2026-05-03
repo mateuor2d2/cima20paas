@@ -78,7 +78,7 @@ export default defineNuxtConfig({
   },
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.cima20.com',
-    name: 'PROJECTES TÈCNICS SL',
+    name: 'CIMA 20',
     description: 'Seguretat, Prevenció, Medi Ambient i Qualitat',
     defaultLocale: 'es',
   },

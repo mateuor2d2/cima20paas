@@ -12,7 +12,7 @@ const { data: siteConfig } = await useAsyncData(`config-footer-${siteId.value}`,
 
 const footerLinks = computed(() => siteConfig.value?.footer?.links || [])
 const footerText = computed(() => siteConfig.value?.footer?.text || '')
-const siteName = computed(() => siteConfig.value?.name || 'PROJECTES TÈCNICS SL')
+const siteName = computed(() => siteConfig.value?.name || 'CIMA 20')
 
 const services = [
   { label: 'Seguridad en el Trabajo', to: '/servicios' },
