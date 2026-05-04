@@ -9,6 +9,8 @@ export function useSite() {
     const map: Record<string, string> = {
       'www.cima20.com': 'cima',
       'cima20.com': 'cima',
+      'cima20.io': 'cima',
+      'www.cima20.io': 'cima',
       'localhost': 'cima',
       '127.0.0.1': 'cima',
       '89.167.58.18': 'cima',
