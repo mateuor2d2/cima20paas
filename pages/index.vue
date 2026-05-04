@@ -47,30 +47,30 @@ onMounted(() => {
 })
 
 // Service cards data
-const services = [
+const services = computed(() => [
   { icon: 'i-lucide-shield', title: t('home.service_work_safety_title'), description: t('home.service_work_safety_desc') },
   { icon: 'i-lucide-heart-pulse', title: t('home.service_risk_prevention_title'), description: t('home.service_risk_prevention_desc') },
   { icon: 'i-lucide-leaf', title: t('home.service_environment_title'), description: t('home.service_environment_desc') },
   { icon: 'i-lucide-check-circle-2', title: t('home.service_quality_title'), description: t('home.service_quality_desc') },
-]
+])
 
 // Stats data
-const stats = [
+const stats = computed(() => [
   { value: '20+', label: t('home.stat_years'), icon: 'i-lucide-calendar' },
   { value: '300+', label: t('home.stat_companies'), icon: 'i-lucide-building-2' },
   { value: '15+', label: t('home.stat_professionals'), icon: 'i-lucide-users' },
   { value: '1000+', label: t('home.stat_audits'), icon: 'i-lucide-clipboard-check' },
-]
+])
 
 // Why choose us features
-const features = [
+const features = computed(() => [
   { icon: 'i-lucide-award', title: t('home.feature_cert_title'), description: t('home.feature_cert_desc') },
   { icon: 'i-lucide-zap', title: t('home.feature_speed_title'), description: t('home.feature_speed_desc') },
   { icon: 'i-lucide-target', title: t('home.feature_custom_title'), description: t('home.feature_custom_desc') },
   { icon: 'i-lucide-trending-up', title: t('home.feature_improve_title'), description: t('home.feature_improve_desc') },
   { icon: 'i-lucide-handshake', title: t('home.feature_commitment_title'), description: t('home.feature_commitment_desc') },
   { icon: 'i-lucide-book-open', title: t('home.feature_training_title'), description: t('home.feature_training_desc') },
-]
+])
 </script>
 
 <template>
