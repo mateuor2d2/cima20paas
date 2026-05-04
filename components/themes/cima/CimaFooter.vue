@@ -4,6 +4,7 @@
  * 4-column grid: Brand, Navigation, Services, Contact.
  */
 const { siteId } = useSite()
+const { t } = useI18n()
 const year = new Date().getFullYear()
 
 const { data: siteConfig } = await useAsyncData(`config-footer-${siteId.value}`, () => {
@@ -14,22 +15,22 @@ const footerLinks = computed(() => siteConfig.value?.footer?.links || [])
 const footerText = computed(() => siteConfig.value?.footer?.text || '')
 const siteName = computed(() => siteConfig.value?.name || 'CIMA 20')
 
-const services = [
-  { label: 'Seguridad en el Trabajo', to: '/servicios' },
-  { label: 'Prevención de Riesgos', to: '/servicios' },
-  { label: 'Medio Ambiente', to: '/servicios' },
-  { label: 'Calidad y Normativas', to: '/servicios' },
-  { label: 'Auditorías', to: '/servicios' },
-  { label: 'Formación', to: '/servicios' },
-]
+const services = computed(() => [
+  { label: t('footer_services.work_safety'), to: '/servicios' },
+  { label: t('footer_services.risk_prevention'), to: '/servicios' },
+  { label: t('footer_services.environment'), to: '/servicios' },
+  { label: t('footer_services.quality_standards'), to: '/servicios' },
+  { label: t('footer_services.audits'), to: '/servicios' },
+  { label: t('footer_services.training'), to: '/servicios' },
+])
 
-const navLinks = [
-  { label: 'Inicio', to: '/' },
-  { label: 'Servicios', to: '/servicios' },
-  { label: 'Sobre Nosotros', to: '/sobre-nosotros' },
-  { label: 'Blog', to: '/blog' },
-  { label: 'Contacto', to: '/contacto' },
-]
+const navLinks = computed(() => [
+  { label: t('footer_nav.home'), to: '/' },
+  { label: t('footer_nav.services'), to: '/servicios' },
+  { label: t('footer_nav.about'), to: '/sobre-nosotros' },
+  { label: t('footer_nav.blog'), to: '/blog' },
+  { label: t('footer_nav.contact'), to: '/contacto' },
+])
 </script>
 
 <template>
@@ -52,7 +53,7 @@ const navLinks = [
             />
           </div>
           <p class="text-sm text-neutral-300 leading-relaxed max-w-xs">
-            Más de 20 años especializados en Seguridad, Prevención de Riesgos Laborales, Medio Ambiente y Calidad. Su partner de confianza en salud laboral.
+            {{ t('footer.brand_description') }}
           </p>
           <!-- Social media icons -->
           <div class="flex items-center gap-2.5 pt-1">
@@ -75,7 +76,7 @@ const navLinks = [
         <div>
           <h3 class="text-xs font-semibold text-white uppercase tracking-[0.12em] mb-6 flex items-center gap-2.5">
             <span class="w-5 h-0.5 bg-blue-500 rounded-full" />
-            Navegación
+            {{ t('footer.navigation') }}
           </h3>
           <nav aria-label="Navegación del pie de página" class="space-y-3">
             <NuxtLink
@@ -93,7 +94,7 @@ const navLinks = [
         <div>
           <h3 class="text-xs font-semibold text-white uppercase tracking-[0.12em] mb-6 flex items-center gap-2.5">
             <span class="w-5 h-0.5 bg-blue-500 rounded-full" />
-            Servicios
+            {{ t('footer.services') }}
           </h3>
           <div class="space-y-3">
             <NuxtLink
@@ -111,7 +112,7 @@ const navLinks = [
         <div>
           <h3 class="text-xs font-semibold text-white uppercase tracking-[0.12em] mb-6 flex items-center gap-2.5">
             <span class="w-5 h-0.5 bg-blue-500 rounded-full" />
-            Contacto
+            {{ t('footer.contact') }}
           </h3>
           <div class="space-y-5">
             <div class="flex items-start gap-3">
@@ -143,7 +144,7 @@ const navLinks = [
                 <UIcon name="i-lucide-clock" class="w-4 h-4 text-blue-400" />
               </div>
               <div>
-                <p class="text-sm text-neutral-200">Lun - Vie: 9:00 - 18:00</p>
+                <p class="text-sm text-neutral-200">{{ t('contact.schedule_detail') }}</p>
               </div>
             </div>
           </div>
@@ -156,7 +157,7 @@ const navLinks = [
       <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-6">
         <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
           <p class="text-xs text-neutral-400">
-            {{ footerText || `© ${year} ${siteName}. Todos los derechos reservados.` }}
+            {{ footerText || t('footer.copyright') }}
           </p>
           <nav v-if="footerLinks.length" class="flex items-center gap-5">
             <NuxtLink
