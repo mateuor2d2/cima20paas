@@ -56,7 +56,7 @@ if (!page.value) {
     <UContainer class="py-12">
       <article>
         <h1 class="text-4xl font-bold mb-4">{{ page?.title || slugPath }}</h1>
-        <p v-if="page?.description" class="text-lg text-neutral-600 dark:text-neutral-400 mb-8">
+        <p v-if="page?.description" class="text-lg text-neutral-600 dark:text-neutral-300 mb-8">
           {{ page.description }}
         </p>
 

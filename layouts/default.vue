@@ -15,7 +15,7 @@ const footerComponent = computed(() => siteId.value === 'cima' ? CimaFooter : Si
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col bg-white dark:bg-neutral-950">
+  <div class="min-h-screen flex flex-col bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100">
     <!-- Skip to content link for keyboard navigation -->
     <a
       href="#main-content"

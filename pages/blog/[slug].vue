@@ -76,7 +76,7 @@ if (post.value) {
     <div class="bg-gradient-to-br from-blue-50 to-white dark:from-neutral-900 dark:to-neutral-950 border-b border-neutral-200 dark:border-neutral-800">
       <UContainer class="py-12 md:py-16 max-w-4xl">
         <!-- Breadcrumbs -->
-        <nav class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 mb-6" aria-label="Breadcrumb">
+        <nav class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-300 mb-6" aria-label="Breadcrumb">
           <NuxtLink to="/" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Inicio</NuxtLink>
           <span aria-hidden="true">/</span>
           <NuxtLink to="/blog" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Blog</NuxtLink>
@@ -106,12 +106,12 @@ if (post.value) {
         </h1>
 
         <!-- Description -->
-        <p v-if="post.description" class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 mb-6">
+        <p v-if="post.description" class="text-lg md:text-xl text-neutral-600 dark:text-neutral-300 mb-6">
           {{ post.description }}
         </p>
 
         <!-- Meta: date, author -->
-        <div class="flex flex-wrap items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400">
+        <div class="flex flex-wrap items-center gap-4 text-sm text-neutral-500 dark:text-neutral-300">
           <div class="flex items-center gap-2">
             <UIcon name="i-heroicons-calendar-days" class="w-4 h-4" />
             <time :datetime="post.date">{{ formattedDate }}</time>
@@ -128,7 +128,7 @@ if (post.value) {
             v-for="tag in post.tags"
             :key="tag"
             :to="`/blog/tag/${tag}`"
-            class="px-3 py-1 text-xs rounded-full border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+            class="px-3 py-1 text-xs rounded-full border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
           >
             #{{ tag }}
           </NuxtLink>
@@ -172,7 +172,7 @@ if (post.value) {
             :to="related.path"
             class="group bg-white dark:bg-neutral-900 rounded-lg border border-neutral-200 dark:border-neutral-800 p-5 hover:shadow-lg transition-shadow"
           >
-            <div class="flex items-center gap-2 text-xs text-neutral-500 dark:text-neutral-400 mb-2">
+            <div class="flex items-center gap-2 text-xs text-neutral-500 dark:text-neutral-300 mb-2">
               <span v-if="related.category" class="px-2 py-0.5 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded-full">
                 {{ related.category }}
               </span>
@@ -181,7 +181,7 @@ if (post.value) {
             <h3 class="text-sm font-semibold text-neutral-800 dark:text-neutral-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
               {{ related.title }}
             </h3>
-            <p v-if="related.description" class="text-xs text-neutral-500 dark:text-neutral-400 mt-2 line-clamp-2">
+            <p v-if="related.description" class="text-xs text-neutral-500 dark:text-neutral-300 mt-2 line-clamp-2">
               {{ related.description }}
             </p>
           </NuxtLink>

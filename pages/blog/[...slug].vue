@@ -51,7 +51,7 @@ if (!post.value) {
           
           <h1 class="text-4xl font-bold mb-4">{{ post.title }}</h1>
           
-          <p v-if="post.description" class="text-xl text-neutral-600 dark:text-neutral-400">
+          <p v-if="post.description" class="text-xl text-neutral-600 dark:text-neutral-300">
             {{ post.description }}
           </p>
           
@@ -59,7 +59,7 @@ if (!post.value) {
             <span
               v-for="tag in post.tags"
               :key="tag"
-              class="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 text-sm rounded-full"
+              class="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 text-sm rounded-full"
             >
               {{ tag }}
             </span>

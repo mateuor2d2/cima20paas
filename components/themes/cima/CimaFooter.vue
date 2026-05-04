@@ -43,12 +43,13 @@ const navLinks = [
         <!-- Brand Column -->
         <div class="sm:col-span-2 lg:col-span-1 space-y-6">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-blue-900/30">
-              PT
-            </div>
-            <div>
-              <span class="text-lg font-bold text-white block leading-tight">{{ siteName }}</span>
-            </div>
+            <NuxtImg
+              src="/logo.png"
+              alt="CIMA 20"
+              class="h-8 w-auto brightness-0 invert"
+              format="webp"
+              quality="90"
+            />
           </div>
           <p class="text-sm text-neutral-300 leading-relaxed max-w-xs">
             Más de 20 años especializados en Seguridad, Prevención de Riesgos Laborales, Medio Ambiente y Calidad. Su partner de confianza en salud laboral.

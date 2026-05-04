@@ -184,7 +184,7 @@ useCimaBreadcrumbs([
     <div class="bg-gradient-to-b from-blue-50 to-white dark:from-neutral-900 dark:to-neutral-950 border-b border-neutral-100 dark:border-neutral-800">
       <UContainer class="pt-12 pb-6">
         <h1 class="text-4xl font-bold text-neutral-900 dark:text-white">{{ page?.title || 'Contacto' }}</h1>
-        <p v-if="page?.description" class="mt-3 text-lg text-neutral-500 dark:text-neutral-400 max-w-2xl">{{ page.description }}</p>
+        <p v-if="page?.description" class="mt-3 text-lg text-neutral-500 dark:text-neutral-300 max-w-2xl">{{ page.description }}</p>
         <div v-if="page?.body" class="prose dark:prose-invert max-w-none mt-4">
           <ContentRenderer :value="page" />
         </div>
@@ -203,7 +203,7 @@ useCimaBreadcrumbs([
               </div>
               <div>
                 <h3 class="text-sm font-semibold text-neutral-900 dark:text-white mb-1">Dirección</h3>
-                <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">C/Pau Piferrer, 8<br>07011 Palma (Illes Balears)</p>
+                <p class="text-sm text-neutral-500 dark:text-neutral-300 leading-relaxed">C/Pau Piferrer, 8<br>07011 Palma (Illes Balears)</p>
               </div>
             </div>
           </div>
@@ -242,7 +242,7 @@ useCimaBreadcrumbs([
               </div>
               <div>
                 <h3 class="text-sm font-semibold text-neutral-900 dark:text-white mb-1">Horario</h3>
-                <p class="text-sm text-neutral-500 dark:text-neutral-400">Lunes – Viernes<br>9:00 – 18:00</p>
+                <p class="text-sm text-neutral-500 dark:text-neutral-300">Lunes – Viernes<br>9:00 – 18:00</p>
               </div>
             </div>
           </div>
@@ -400,7 +400,7 @@ useCimaBreadcrumbs([
                 {{ loading ? 'Enviando...' : 'Enviar mensaje' }}
               </UButton>
 
-              <p class="text-xs text-neutral-500 dark:text-neutral-400 text-center mt-2">
+              <p class="text-xs text-neutral-500 dark:text-neutral-300 text-center mt-2">
                 Los campos marcados con <span class="text-red-500">*</span> son obligatorios
               </p>
             </form>
@@ -413,8 +413,8 @@ useCimaBreadcrumbs([
                 <div class="w-14 h-14 rounded-2xl bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center mx-auto mb-3">
                   <UIcon name="i-lucide-map" class="w-7 h-7 text-blue-600 dark:text-blue-400" />
                 </div>
-                <p class="text-sm font-medium text-neutral-600 dark:text-neutral-400">C/Pau Piferrer, 8 · 07011 Palma</p>
-                <p class="text-xs text-neutral-400 dark:text-neutral-500 mt-1">Illes Balears</p>
+                <p class="text-sm font-medium text-neutral-600 dark:text-neutral-300">C/Pau Piferrer, 8 · 07011 Palma</p>
+                <p class="text-xs text-neutral-400 dark:text-neutral-300 mt-1">Illes Balears</p>
               </div>
               <!-- Subtle grid pattern -->
               <div class="absolute inset-0 opacity-[0.04]" aria-hidden="true"

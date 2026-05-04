@@ -45,7 +45,7 @@ useCimaBreadcrumbs([
   <div>
     <UContainer class="py-12">
       <h1 class="text-4xl font-bold mb-4">Actualidad</h1>
-      <p class="text-lg text-neutral-600 dark:text-neutral-400 mb-12">
+      <p class="text-lg text-neutral-600 dark:text-neutral-300 mb-12">
         Noticias, artículos y novedades sobre prevención de riesgos laborales y salud ocupacional.
       </p>
 
@@ -74,7 +74,7 @@ useCimaBreadcrumbs([
                   </NuxtLink>
                 </h2>
                 
-                <p v-if="post.description" class="text-neutral-600 dark:text-neutral-400 text-sm line-clamp-3 mb-4">
+                <p v-if="post.description" class="text-neutral-600 dark:text-neutral-300 text-sm line-clamp-3 mb-4">
                   {{ post.description }}
                 </p>
                 
@@ -83,7 +83,7 @@ useCimaBreadcrumbs([
                     v-for="tag in post.tags"
                     :key="tag"
                     :to="`/blog/tag/${tag}`"
-                    class="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 text-xs rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
+                    class="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 text-xs rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
                   >
                     {{ tag }}
                   </NuxtLink>

@@ -62,17 +62,13 @@ watch(() => route.path, () => { mobileMenuOpen.value = false })
       <div class="flex items-center justify-between h-16 lg:h-[72px]">
         <!-- Logo / Brand -->
         <NuxtLink to="/" class="flex items-center gap-3 group" aria-label="CIMA 20 - Inicio">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center text-white font-bold text-sm shadow-sm shadow-blue-600/20 group-hover:shadow-md group-hover:shadow-blue-600/30 group-hover:scale-105 transition-all duration-300">
-            PT
-          </div>
-          <div class="flex flex-col">
-            <span class="text-base font-bold text-neutral-900 dark:text-white leading-tight group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors duration-200">
-              {{ siteName }}
-            </span>
-            <span class="text-[11px] text-neutral-500 dark:text-neutral-300 hidden sm:block leading-tight tracking-wide">
-              Seguretat · Prevenció · Medi Ambient · Qualitat
-            </span>
-          </div>
+          <NuxtImg
+            src="/logo.png"
+            alt="CIMA 20"
+            class="h-10 w-auto group-hover:scale-105 transition-transform duration-300"
+            format="webp"
+            quality="90"
+          />
         </NuxtLink>
 
         <!-- Desktop Navigation -->

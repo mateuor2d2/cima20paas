@@ -55,7 +55,7 @@ useCimaBreadcrumbs([
       </nav>
 
       <h1 class="text-4xl font-bold mb-4">Tag: {{ tagName }}</h1>
-      <p class="text-lg text-neutral-600 dark:text-neutral-400 mb-12">
+      <p class="text-lg text-neutral-600 dark:text-neutral-300 mb-12">
         {{ posts.length }} artículo{{ posts.length !== 1 ? 's' : '' }} con esta etiqueta.
       </p>
 
@@ -79,7 +79,7 @@ useCimaBreadcrumbs([
               </NuxtLink>
             </h2>
 
-            <p v-if="post.description" class="text-neutral-600 dark:text-neutral-400 text-sm line-clamp-3">
+            <p v-if="post.description" class="text-neutral-600 dark:text-neutral-300 text-sm line-clamp-3">
               {{ post.description }}
             </p>
           </div>

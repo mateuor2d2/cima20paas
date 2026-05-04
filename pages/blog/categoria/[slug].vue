@@ -51,7 +51,7 @@ useCimaBreadcrumbs([
       </nav>
 
       <h1 class="text-4xl font-bold mb-4">Categoría: {{ categoryName }}</h1>
-      <p class="text-lg text-neutral-600 dark:text-neutral-400 mb-12">
+      <p class="text-lg text-neutral-600 dark:text-neutral-300 mb-12">
         {{ posts?.length || 0 }} artículo{{ (posts?.length || 0) !== 1 ? 's' : '' }} en esta categoría.
       </p>
 
@@ -75,7 +75,7 @@ useCimaBreadcrumbs([
               </NuxtLink>
             </h2>
 
-            <p v-if="post.description" class="text-neutral-600 dark:text-neutral-400 text-sm line-clamp-3">
+            <p v-if="post.description" class="text-neutral-600 dark:text-neutral-300 text-sm line-clamp-3">
               {{ post.description }}
             </p>
           </div>
