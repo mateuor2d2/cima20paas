@@ -6,7 +6,6 @@
 const { siteId } = useSite()
 const { locale: currentLocale, locales: availableLocales } = useI18n()
 const localePath = useLocalePath()
-const colorMode = useColorMode()
 const mobileMenuOpen = ref(false)
 const scrolled = ref(false)
 
@@ -31,10 +30,6 @@ const mobileNavItems = computed(() => {
 
 function toggleMobile() {
   mobileMenuOpen.value = !mobileMenuOpen.value
-}
-
-function toggleColorMode() {
-  colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
 }
 
 // Track scroll for header background enhancement
@@ -133,18 +128,7 @@ watch(() => route.path, () => { mobileMenuOpen.value = false })
             </div>
 
             <!-- Color Mode Toggle -->
-            <button
-              type="button"
-              :aria-label="colorMode.value === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'"
-              class="p-2 rounded-lg text-neutral-500 dark:text-neutral-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all duration-200"
-              @click="toggleColorMode"
-            >
-              <UIcon
-                :name="colorMode.value === 'dark' ? 'i-lucide-sun' : 'i-lucide-moon'"
-                class="w-4.5 h-4.5 transition-transform duration-300"
-                :class="colorMode.value === 'dark' ? 'rotate-0' : 'rotate-0'"
-              />
-            </button>
+            <UColorModeButton />
 
             <!-- Contact CTA -->
             <UButton
@@ -161,17 +145,7 @@ watch(() => route.path, () => { mobileMenuOpen.value = false })
         <!-- Mobile: right side controls -->
         <div class="lg:hidden flex items-center gap-2">
           <!-- Mobile Color Mode Toggle -->
-          <button
-            type="button"
-            :aria-label="colorMode.value === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'"
-            class="p-2 text-neutral-500 dark:text-neutral-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
-            @click="toggleColorMode"
-          >
-            <UIcon
-              :name="colorMode.value === 'dark' ? 'i-lucide-sun' : 'i-lucide-moon'"
-              class="w-5 h-5"
-            />
-          </button>
+          <UColorModeButton />
 
           <!-- Mobile Menu Button -->
           <button
@@ -251,17 +225,7 @@ watch(() => route.path, () => { mobileMenuOpen.value = false })
                 {{ loc.name }}
               </NuxtLink>
             </div>
-            <button
-              type="button"
-              :aria-label="colorMode.value === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'"
-              class="p-2 rounded-lg text-neutral-500 dark:text-neutral-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all duration-200"
-              @click="toggleColorMode"
-            >
-              <UIcon
-                :name="colorMode.value === 'dark' ? 'i-lucide-sun' : 'i-lucide-moon'"
-                class="w-5 h-5"
-              />
-            </button>
+            <UColorModeButton />
           </div>
         </nav>
       </div>
