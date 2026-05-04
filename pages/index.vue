@@ -129,7 +129,7 @@ const features = [
           <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-5 tracking-tight">
             Soluciones integrales para su empresa
           </h2>
-          <p class="text-neutral-500 dark:text-neutral-400 text-base leading-relaxed">
+          <p class="text-neutral-500 dark:text-neutral-300 text-base leading-relaxed">
             Ofrecemos un servicio completo en materia de seguridad, prevención, medio ambiente y calidad, adaptado a las necesidades de cada organización.
           </p>
         </div>
@@ -162,7 +162,7 @@ const features = [
             <div class="saas-stat-number text-4xl md:text-5xl font-extrabold text-neutral-900 dark:text-white mb-2 tracking-tight">
               {{ stat.value }}
             </div>
-            <p class="text-sm text-neutral-500 dark:text-neutral-400 font-medium">{{ stat.label }}</p>
+            <p class="text-sm text-neutral-500 dark:text-neutral-300 font-medium">{{ stat.label }}</p>
           </div>
         </div>
       </UContainer>
@@ -179,7 +179,7 @@ const features = [
           <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-5 tracking-tight">
             Su confianza es nuestra prioridad
           </h2>
-          <p class="text-neutral-500 dark:text-neutral-400 text-base leading-relaxed">
+          <p class="text-neutral-500 dark:text-neutral-300 text-base leading-relaxed">
             Combinamos experiencia, profesionalidad y cercanía para ofrecer un servicio de máxima calidad.
           </p>
         </div>
@@ -188,7 +188,7 @@ const features = [
           <div
             v-for="feat in features"
             :key="feat.title"
-            class="saas-card group flex gap-5 p-7 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900"
+            class="saas-card group flex gap-5 p-7 rounded-2xl border border-neutral-200/80 dark:border-neutral-700 bg-white dark:bg-neutral-900"
           >
             <div class="saas-service-icon w-11 h-11 rounded-xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0 text-blue-600 dark:text-blue-400">
               <UIcon :name="feat.icon" class="w-5 h-5" />
@@ -197,7 +197,7 @@ const features = [
               <h3 class="text-base font-semibold text-neutral-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
                 {{ feat.title }}
               </h3>
-              <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
+              <p class="text-sm text-neutral-500 dark:text-neutral-300 leading-relaxed">
                 {{ feat.description }}
               </p>
             </div>

@@ -10,7 +10,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="saas-card group rounded-2xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-7 md:p-8 cursor-default">
+  <div class="saas-card group rounded-2xl border border-neutral-200/80 dark:border-neutral-700 bg-white dark:bg-neutral-900 p-7 md:p-8 cursor-default">
     <!-- Icon -->
     <div class="saas-service-icon w-13 h-13 rounded-xl bg-primary-50 dark:bg-primary-900/30 flex items-center justify-center mb-6 text-primary-600 dark:text-primary-400">
       <UIcon :name="icon" class="w-6 h-6" />
@@ -22,7 +22,7 @@ defineProps<{
     </h3>
 
     <!-- Description -->
-    <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
+    <p class="text-sm text-neutral-500 dark:text-neutral-300 leading-relaxed">
       {{ description }}
     </p>
   </div>

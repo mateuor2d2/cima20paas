@@ -33,7 +33,7 @@ const navLinks = [
 </script>
 
 <template>
-  <footer role="contentinfo" class="bg-neutral-900 dark:bg-neutral-950 text-neutral-300">
+  <footer role="contentinfo" class="bg-neutral-900 dark:bg-black text-neutral-200">
     <!-- Gradient top border -->
     <div class="saas-footer-border h-1" aria-hidden="true" />
 
@@ -50,21 +50,21 @@ const navLinks = [
               <span class="text-lg font-bold text-white block leading-tight">{{ siteName }}</span>
             </div>
           </div>
-          <p class="text-sm text-neutral-400 leading-relaxed max-w-xs">
+          <p class="text-sm text-neutral-300 leading-relaxed max-w-xs">
             Más de 20 años especializados en Seguridad, Prevención de Riesgos Laborales, Medio Ambiente y Calidad. Su partner de confianza en salud laboral.
           </p>
           <!-- Social media icons -->
           <div class="flex items-center gap-2.5 pt-1">
-            <a href="https://www.linkedin.com/company/23678070/" aria-label="LinkedIn" class="w-9 h-9 rounded-lg bg-neutral-800/80 hover:bg-blue-600 flex items-center justify-center text-neutral-400 hover:text-white transition-all duration-200">
+            <a href="https://www.linkedin.com/company/23678070/" aria-label="LinkedIn" class="w-9 h-9 rounded-lg bg-neutral-800/80 hover:bg-blue-600 flex items-center justify-center text-neutral-300 hover:text-white transition-all duration-200">
               <UIcon name="i-lucide-linkedin" class="w-4 h-4" />
             </a>
-            <a href="https://twitter.com/cima20_" aria-label="Twitter" class="w-9 h-9 rounded-lg bg-neutral-800/80 hover:bg-blue-600 flex items-center justify-center text-neutral-400 hover:text-white transition-all duration-200">
+            <a href="https://twitter.com/cima20_" aria-label="Twitter" class="w-9 h-9 rounded-lg bg-neutral-800/80 hover:bg-blue-600 flex items-center justify-center text-neutral-300 hover:text-white transition-all duration-200">
               <UIcon name="i-lucide-twitter" class="w-4 h-4" />
             </a>
-            <a href="https://www.facebook.com/cima20empresaludable" aria-label="Facebook" class="w-9 h-9 rounded-lg bg-neutral-800/80 hover:bg-blue-600 flex items-center justify-center text-neutral-400 hover:text-white transition-all duration-200">
+            <a href="https://www.facebook.com/cima20empresaludable" aria-label="Facebook" class="w-9 h-9 rounded-lg bg-neutral-800/80 hover:bg-blue-600 flex items-center justify-center text-neutral-300 hover:text-white transition-all duration-200">
               <UIcon name="i-lucide-facebook" class="w-4 h-4" />
             </a>
-            <a href="https://www.instagram.com/cima20_/" aria-label="Instagram" class="w-9 h-9 rounded-lg bg-neutral-800/80 hover:bg-blue-600 flex items-center justify-center text-neutral-400 hover:text-white transition-all duration-200">
+            <a href="https://www.instagram.com/cima20_/" aria-label="Instagram" class="w-9 h-9 rounded-lg bg-neutral-800/80 hover:bg-blue-600 flex items-center justify-center text-neutral-300 hover:text-white transition-all duration-200">
               <UIcon name="i-lucide-instagram" class="w-4 h-4" />
             </a>
           </div>
@@ -81,7 +81,7 @@ const navLinks = [
               v-for="link in navLinks"
               :key="link.to"
               :to="link.to"
-              class="block text-sm text-neutral-400 hover:text-blue-400 transition-colors duration-200 hover:translate-x-1 transform"
+              class="block text-sm text-neutral-300 hover:text-blue-400 transition-colors duration-200 hover:translate-x-1 transform"
             >
               {{ link.label }}
             </NuxtLink>
@@ -99,7 +99,7 @@ const navLinks = [
               v-for="svc in services"
               :key="svc.label"
               :to="svc.to"
-              class="block text-sm text-neutral-400 hover:text-blue-400 transition-colors duration-200 hover:translate-x-1 transform"
+              class="block text-sm text-neutral-300 hover:text-blue-400 transition-colors duration-200 hover:translate-x-1 transform"
             >
               {{ svc.label }}
             </NuxtLink>
@@ -118,7 +118,7 @@ const navLinks = [
                 <UIcon name="i-lucide-map-pin" class="w-4 h-4 text-blue-400" />
               </div>
               <div>
-                <p class="text-sm text-neutral-300 leading-relaxed">C/Pau Piferrer, 8<br>07011 Palma de Mallorca, Illes Balears</p>
+                <p class="text-sm text-neutral-200 leading-relaxed">C/Pau Piferrer, 8<br>07011 Palma de Mallorca, Illes Balears</p>
               </div>
             </div>
             <div class="flex items-start gap-3">
@@ -126,7 +126,7 @@ const navLinks = [
                 <UIcon name="i-lucide-mail" class="w-4 h-4 text-blue-400" />
               </div>
               <div>
-                <a href="mailto:cima20@cima20.com" class="text-sm text-neutral-300 hover:text-blue-400 transition-colors duration-200">cima20@cima20.com</a>
+                <a href="mailto:cima20@cima20.com" class="text-sm text-neutral-200 hover:text-blue-400 transition-colors duration-200">cima20@cima20.com</a>
               </div>
             </div>
             <div class="flex items-start gap-3">
@@ -134,7 +134,7 @@ const navLinks = [
                 <UIcon name="i-lucide-phone" class="w-4 h-4 text-blue-400" />
               </div>
               <div>
-                <a href="tel:+34971714584" class="text-sm text-neutral-300 hover:text-blue-400 transition-colors duration-200">971 714 584</a>
+                <a href="tel:+34971714584" class="text-sm text-neutral-200 hover:text-blue-400 transition-colors duration-200">971 714 584</a>
               </div>
             </div>
             <div class="flex items-start gap-3">
@@ -142,7 +142,7 @@ const navLinks = [
                 <UIcon name="i-lucide-clock" class="w-4 h-4 text-blue-400" />
               </div>
               <div>
-                <p class="text-sm text-neutral-300">Lun - Vie: 9:00 - 18:00</p>
+                <p class="text-sm text-neutral-200">Lun - Vie: 9:00 - 18:00</p>
               </div>
             </div>
           </div>
@@ -154,7 +154,7 @@ const navLinks = [
     <div class="border-t border-neutral-800/60">
       <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-6">
         <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p class="text-xs text-neutral-500">
+          <p class="text-xs text-neutral-400">
             {{ footerText || `© ${year} ${siteName}. Todos los derechos reservados.` }}
           </p>
           <nav v-if="footerLinks.length" class="flex items-center gap-5">
@@ -162,7 +162,7 @@ const navLinks = [
               v-for="link in footerLinks"
               :key="link.to"
               :to="link.to"
-              class="text-xs text-neutral-500 hover:text-blue-400 transition-colors duration-200"
+              class="text-xs text-neutral-400 hover:text-blue-400 transition-colors duration-200"
             >
               {{ link.label }}
             </NuxtLink>
