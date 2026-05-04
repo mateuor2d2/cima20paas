@@ -66,11 +66,10 @@ export default defineNuxtConfig({
     strategy: 'prefix_except_default',
     defaultLocale: 'es',
     locales: [
-      { code: 'es', name: 'Español', file: 'es.json' },
-      { code: 'ca', name: 'Català', file: 'ca.json' }
+      { code: 'es', name: 'Español' },
+      { code: 'ca', name: 'Català' }
     ],
     langDir: 'locales',
-    lazy: true,
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
