@@ -4,6 +4,8 @@ services:
       context: .
       dockerfile: Dockerfile
     restart: unless-stopped
+    ports:
+      - 3001:3001
     environment:
       - NODE_ENV=production
       - NUXT_PUBLIC_SITE_URL=${NUXT_PUBLIC_SITE_URL:-https://www.cima20.com}
@@ -14,24 +16,22 @@ services:
       - SMTP_PASS=${SMTP_PASS}
       - CONTACT_EMAIL=${CONTACT_EMAIL:-info@cima20.com}
     networks:
-      - dokploy-network
+      - cima20paas-frontend
+    security_opt:
+      - no-new-privileges:true
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.cima20paas.rule=Host(${DOMAIN:-www.cima20.com,cima20.com})"
+      - "traefik.http.routers.cima20paas.rule=Host(`www.cima20.com`) || Host(`cima20.com`)"
       - "traefik.http.routers.cima20paas.entrypoints=websecure"
       - "traefik.http.routers.cima20paas.tls.certresolver=letsencrypt"
-      - "traefik.http.services.cima20paas.loadbalancer.server.port=3001"
-      - "traefik.http.middlewares.cima20paas-redirect.redirectscheme.scheme=https"
-      - "traefik.http.routers.cima20paas-http.rule=Host(${DOMAIN:-www.cima20.com,cima20.com})"
+      - "traefik.http.routers.cima20paas.tls.options=tls-hardened@file"
+      - "traefik.http.routers.cima20paas.middlewares=public-hardening@file"
+      - "traefik.http.routers.cima20paas-http.rule=Host(`www.cima20.com`) || Host(`cima20.com`)"
       - "traefik.http.routers.cima20paas-http.entrypoints=web"
-      - "traefik.http.routers.cima20paas-http.middlewares=cima20paas-redirect"
-    healthcheck:
-      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3001/api/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
+      - "traefik.http.routers.cima20paas-http.middlewares=redirect-to-https@file"
+    mem_limit: 512m
+    cpus: 1.0
 
 networks:
-  dokploy-network:
+  cima20paas-frontend:
     external: true

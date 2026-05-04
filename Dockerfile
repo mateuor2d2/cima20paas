@@ -27,16 +27,13 @@ FROM oven/bun:1-alpine AS production
 
 WORKDIR /app
 
+# Create non-root user
+RUN addgroup -S appuser && adduser -S appuser -G appuser
+
 # Copy built output from builder
 COPY --from=builder /app/.output ./.output
-
-# Copy content directory for Nuxt Content v3 runtime queries
 COPY --from=builder /app/content ./content
-
-# Copy content.config.ts for Nuxt Content v3 collection definitions
 COPY --from=builder /app/content.config.ts ./content.config.ts
-
-# Copy node_modules for runtime dependencies (@nuxt/image needs ofetch)
 COPY --from=builder /app/node_modules ./node_modules
 
 # Remove existing node_modules in .output/server and create symlink to root
@@ -45,6 +42,9 @@ RUN rm -rf /app/.output/server/node_modules && ln -sf /app/node_modules /app/.ou
 # Copy package.json for reference
 COPY --from=builder /app/package.json ./
 
+# Chown everything to appuser
+RUN chown -R appuser:appuser /app
+
 # Expose the port Nuxt runs on
 EXPOSE 3001
 
@@ -52,5 +52,7 @@ EXPOSE 3001
 ENV NODE_ENV=production
 ENV NUXT_HOST=0.0.0.0
 ENV PORT=3001
+
+USER appuser
 
 CMD ["bun", "run", ".output/server/index.mjs"]
