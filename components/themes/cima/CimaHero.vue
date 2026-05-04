@@ -8,12 +8,14 @@ const props = defineProps({
   showCta: { type: Boolean, default: true },
 })
 
+const { t } = useI18n()
+
 const { siteId } = useSite()
 const { data: siteConfig } = await useAsyncData(`config-hero-${siteId.value}`, () => {
   return queryCollection('site_config').where('stem', '=', `sites/${siteId.value}/config`).first()
 })
 
-const tagline = computed(() => siteConfig.value?.tagline || 'Seguridad y Prevención Profesional')
+const tagline = computed(() => siteConfig.value?.tagline || t('hero.subtitle'))
 </script>
 
 <template>
@@ -69,7 +71,7 @@ const tagline = computed(() => siteConfig.value?.tagline || 'Seguridad y Prevenc
               class="bg-white text-blue-700 font-semibold hover:bg-blue-50 shadow-xl shadow-blue-950/20 hover:shadow-2xl hover:shadow-blue-950/30 transition-all duration-300 hover:-translate-y-0.5"
               :ui="{ base: 'px-8 py-4' }"
             >
-              Solicitar Presupuesto
+              {{ t('hero.cta_primary') }}
             </UButton>
             <UButton
               to="/servicios"
@@ -79,7 +81,7 @@ const tagline = computed(() => siteConfig.value?.tagline || 'Seguridad y Prevenc
               class="border-white/25 text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5"
               :ui="{ base: 'px-8 py-4' }"
             >
-              Nuestros Servicios
+              {{ t('hero.cta_secondary') }}
             </UButton>
           </div>
 
@@ -87,15 +89,15 @@ const tagline = computed(() => siteConfig.value?.tagline || 'Seguridad y Prevenc
           <div class="flex flex-wrap gap-3">
             <span class="saas-trust-badge">
               <UIcon name="i-lucide-shield-check" class="w-3.5 h-3.5" />
-              Certificados ISO
+              {{ t('hero.badge_iso') }}
             </span>
             <span class="saas-trust-badge">
               <UIcon name="i-lucide-users" class="w-3.5 h-3.5" />
-              +300 Empresas
+              {{ t('hero.badge_companies') }}
             </span>
             <span class="saas-trust-badge">
               <UIcon name="i-lucide-clock" class="w-3.5 h-3.5" />
-              +20 Años Experiencia
+              {{ t('hero.badge_years') }}
             </span>
           </div>
         </div>
