@@ -6,6 +6,7 @@
 const { siteId } = useSite()
 const { locale: currentLocale, locales: availableLocales } = useI18n()
 const localePath = useLocalePath()
+const switchLocalePath = useSwitchLocalePath()
 const mobileMenuOpen = ref(false)
 const scrolled = ref(false)
 
@@ -113,7 +114,7 @@ watch(() => route.path, () => { mobileMenuOpen.value = false })
               <NuxtLink
                 v-for="loc in availableLocales"
                 :key="loc.code"
-                :to="localePath(loc.code)"
+                :to="switchLocalePath(loc.code)"
                 :aria-label="`Cambiar idioma a ${loc.name}`"
                 :aria-current="currentLocale === loc.code ? 'true' : undefined"
                 :class="[
@@ -214,12 +215,12 @@ watch(() => route.path, () => { mobileMenuOpen.value = false })
               <NuxtLink
                 v-for="loc in availableLocales"
                 :key="loc.code"
-                :to="localePath(loc.code)"
+                :to="switchLocalePath(loc.code)"
                 :class="[
                   'text-xs px-3 py-1.5 rounded-md font-medium transition-all duration-200',
                   currentLocale === loc.code
                     ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 ring-1 ring-blue-200 dark:ring-blue-800'
-                    : 'text-neutral-500 dark:text-neutral-300 hover:text-blue-600 hover:bg-neutral-50 dark:hover:bg-neutral-800'
+                    : 'text-neutral-500 dark:text-neutral-300 hover:text-blue-600 dark:hover:bg-neutral-50 dark:hover:bg-neutral-800'
                 ]"
               >
                 {{ loc.name }}
