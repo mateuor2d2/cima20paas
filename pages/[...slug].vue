@@ -1,24 +1,40 @@
-
 <script setup>
 const route = useRoute()
 const { siteId } = useSite()
+const { locale } = useI18n()
 
 // Handle catch-all slug (e.g., servicios/seguridad)
+// With prefix_except_default strategy, i18n strips the locale prefix from route.params
+// So /ca/servicios gives route.params.slug = 'servicios', not 'ca/servicios'
 const slugPath = computed(() => {
-  if (Array.isArray(route.params.slug)) {
-    return route.params.slug.join('/')
+  let slug = route.params.slug
+  if (Array.isArray(slug)) {
+    slug = slug.join('/')
   }
-  return route.params.slug
+  return slug || 'index'
 })
 
-// In Nuxt Content v3, the path includes the source directory structure
+// Build content path with locale prefix for non-default locales
 const contentPath = computed(() => {
+  if (locale.value !== 'es') {
+    return `/sites/${siteId.value}/pages/${locale.value}/${slugPath.value}`
+  }
   return `/sites/${siteId.value}/pages/${slugPath.value}`
 })
 
-// Query the page content from Nuxt Content by path
-const { data: page } = await useAsyncData(`page-${siteId.value}-${slugPath.value}`, () => {
-  return queryCollection('pages').path(contentPath.value).first()
+const contentPathDefault = computed(() => {
+  return `/sites/${siteId.value}/pages/${slugPath.value}`
+})
+
+// Query the page content — try locale version first, fallback to default language
+const { data: page } = await useAsyncData(`page-${siteId.value}-${locale.value}-${slugPath.value}`, async () => {
+  // Try localized content first
+  if (locale.value !== 'es') {
+    const localized = await queryCollection('pages').path(contentPath.value).first()
+    if (localized) return localized
+  }
+  // Fallback to default language
+  return queryCollection('pages').path(contentPathDefault.value).first()
 })
 
 // Set SEO meta

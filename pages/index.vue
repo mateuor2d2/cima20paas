@@ -4,12 +4,23 @@
  * Sections: Hero (CimaHero), Services Grid, Stats, Why Choose Us, CTA Banner.
  */
 const { siteId } = useSite()
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
-const contentPath = computed(() => `/sites/${siteId.value}/pages/index`)
+const contentPath = computed(() => {
+  if (locale.value !== 'es') {
+    return `/sites/${siteId.value}/pages/${locale.value}/index`
+  }
+  return `/sites/${siteId.value}/pages/index`
+})
 
-const { data: page } = await useAsyncData(`homepage-${siteId.value}`, () => {
-  return queryCollection('pages').path(contentPath.value).first()
+const contentPathDefault = computed(() => `/sites/${siteId.value}/pages/index`)
+
+const { data: page } = await useAsyncData(`homepage-${siteId.value}-${locale.value}`, async () => {
+  if (locale.value !== 'es') {
+    const localized = await queryCollection('pages').path(contentPath.value).first()
+    if (localized) return localized
+  }
+  return queryCollection('pages').path(contentPathDefault.value).first()
 })
 
 const { data: siteConfig } = await useAsyncData(`config-${siteId.value}`, () => {
