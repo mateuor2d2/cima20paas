@@ -20,3 +20,9 @@ En CIMA 20 caminamos hacia ese modelo y además ofrecemos un servicio de consult
 Todo ello con un enfoque flexible, adaptado a cada sector y al tamaño de la empresa, para lograr un impacto positivo tanto en la salud de los trabajadores como en los indicadores de productividad y absentismo.
 
 Puede contactar con nosotros para solicitar información sobre este servicio de asesoría.
+
+---
+
+![Gráfico empresa saludable](/images/asesoria/grafico-empresa-saludable.png)
+
+![Beneficios empresa saludable](/images/asesoria/pros__empresa_saludable.png)

@@ -167,6 +167,29 @@ const features = computed(() => [
       </UContainer>
     </section>
 
+    <!-- ISO 9001 Certification Section -->
+    <section class="saas-fade-in py-16 bg-neutral-50 dark:bg-neutral-900/50" aria-label="Certificación ISO 9001">
+      <UContainer>
+        <div class="flex flex-col md:flex-row items-center gap-8 max-w-3xl mx-auto text-center md:text-left">
+          <NuxtImg
+            src="/images/iso-9001.svg"
+            alt="Certificado ISO 9001"
+            width="140"
+            height="140"
+            class="w-32 h-32 md:w-36 md:h-36 flex-shrink-0"
+          />
+          <div>
+            <h2 class="text-2xl md:text-3xl font-bold text-neutral-900 dark:text-white mb-3">
+              {{ t('home.iso_title') }}
+            </h2>
+            <p class="text-neutral-500 dark:text-neutral-300 leading-relaxed">
+              {{ t('home.iso_desc') }}
+            </p>
+          </div>
+        </div>
+      </UContainer>
+    </section>
+
     <!-- CTA Banner Section -->
     <section class="saas-fade-in relative overflow-hidden saas-cta-gradient py-20 md:py-24" aria-label="Call to action">
       <!-- Decorative shapes -->
