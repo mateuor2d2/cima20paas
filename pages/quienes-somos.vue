@@ -2,8 +2,13 @@
 import type { /* Astro/Slug route params */ } from 'vue-router'
 
 const { siteId } = useSite()
+const { locale } = useI18n()
 
-const { data: page } = await useAsyncData('quienes-somos', () => {
+const { data: page } = await useAsyncData(`quienes-somos-${locale.value}`, async () => {
+  if (locale.value !== 'es') {
+    const localized = await queryCollection('pages').path(`/sites/${siteId.value}/pages/${locale.value}/quienes-somos`).first()
+    if (localized) return localized
+  }
   return queryCollection('pages').path(`/sites/${siteId.value}/pages/quienes-somos`).first()
 })
 
