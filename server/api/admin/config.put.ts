@@ -1,6 +1,6 @@
 import { writeFile } from 'fs/promises'
 import { join } from 'path'
-import { stringify } from 'yaml'
+import { validateSiteId } from '~/server/utils/path-security'
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
@@ -10,9 +10,11 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'siteId and config are required' })
   }
 
+  const safeSiteId = validateSiteId(siteId)
+
   // Build YAML config with site field
   const configData = {
-    site: siteId,
+    site: safeSiteId,
     name: config.name,
     tagline: config.tagline || '',
     theme: config.theme || 'default',
@@ -21,11 +23,10 @@ export default defineEventHandler(async (event) => {
     footer: config.footer || { text: '', links: [] },
   }
 
-  // Convert to YAML manually for simplicity (or use yaml package)
-  // Using a simple manual approach since 'yaml' might not be installed
-  const yamlContent = objectToYaml(configData)
+  // Safe path: only alphanumeric siteId, fixed filename
+  const fullPath = join(process.cwd(), 'content', 'sites', safeSiteId, 'config.yml')
 
-  const fullPath = join(process.cwd(), 'content', 'sites', siteId, 'config.yml')
+  const yamlContent = objectToYaml(configData)
 
   await writeFile(fullPath, yamlContent, 'utf-8')
 

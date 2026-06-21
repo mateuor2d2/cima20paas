@@ -180,7 +180,7 @@ useSeoMeta({
             />
           </div>
           <div v-else class="p-4 prose dark:prose-invert max-w-none">
-            <div v-if="form.body" v-html="renderMarkdown(form.body)" />
+            <pre v-if="form.body" class="whitespace-pre-wrap font-mono text-sm">{{ form.body }}</pre>
             <p v-else class="text-neutral-400 text-sm">No hay contenido para previsualizar</p>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { writeFile, mkdir } from 'fs/promises'
 import { join, dirname } from 'path'
+import { validateSiteId } from '~/server/utils/path-security'
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
@@ -9,8 +10,10 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'slug, title, site, and date are required' })
   }
 
+  const safeSite = validateSiteId(site)
+
   // Build frontmatter
-  const frontmatter: Record<string, any> = { title, site, date }
+  const frontmatter: Record<string, any> = { title, site: safeSite, date }
   if (description) frontmatter.description = description
   if (category) frontmatter.category = category
   if (tags?.length) frontmatter.tags = tags
@@ -31,7 +34,7 @@ export default defineEventHandler(async (event) => {
   frontmatterLines.push('---')
 
   const slugClean = slug.replace(/[^a-z0-9-]/gi, '-').toLowerCase()
-  const fullPath = join(process.cwd(), 'content', 'sites', site, 'posts', `${slugClean}.md`)
+  const fullPath = join(process.cwd(), 'content', 'sites', safeSite, 'posts', `${slugClean}.md`)
 
   // Ensure directory exists
   await mkdir(dirname(fullPath), { recursive: true })

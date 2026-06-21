@@ -1,5 +1,6 @@
 import { readFile, readdir } from 'fs/promises'
 import { join } from 'path'
+import { validateSiteId } from '~/server/utils/path-security'
 
 export default defineEventHandler(async (event) => {
   const { siteId } = getQuery(event)
@@ -8,13 +9,13 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'siteId is required' })
   }
 
-  const contentDir = join(process.cwd(), 'content', 'sites', siteId, 'pages')
+  const safeSiteId = validateSiteId(siteId)
+  const contentDir = join(process.cwd(), 'content', 'sites', safeSiteId, 'pages')
 
   try {
     const files = await walkDir(contentDir, contentDir)
     return files
   } catch (e: any) {
-    // If directory doesn't exist, return empty
     if (e.code === 'ENOENT') return []
     throw createError({ statusCode: 500, statusMessage: e.message })
   }

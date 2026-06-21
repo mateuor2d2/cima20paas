@@ -1,5 +1,6 @@
 import { readdir } from 'fs/promises'
 import { join } from 'path'
+import { validateSiteId } from '~/server/utils/path-security'
 
 export default defineEventHandler(async (event) => {
   const { siteId } = getQuery(event)
@@ -8,7 +9,8 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'siteId is required' })
   }
 
-  const postsDir = join(process.cwd(), 'content', 'sites', siteId, 'posts')
+  const safeSiteId = validateSiteId(siteId)
+  const postsDir = join(process.cwd(), 'content', 'sites', safeSiteId, 'posts')
 
   try {
     const files = await readdir(postsDir)

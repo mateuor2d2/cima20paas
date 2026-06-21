@@ -1,5 +1,6 @@
 import { writeFile, mkdir } from 'fs/promises'
 import { join, dirname } from 'path'
+import { safeJoin, validateSiteId } from '~/server/utils/path-security'
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
@@ -9,8 +10,12 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'path, title, and site are required' })
   }
 
+  const safeSite = validateSiteId(site)
+  const baseDir = join(process.cwd(), 'content', 'sites', safeSite, 'pages')
+  const fullPath = safeJoin(baseDir, contentPath.replace(/^\//, ''))
+
   // Build frontmatter
-  const frontmatter: Record<string, any> = { title, site }
+  const frontmatter: Record<string, any> = { title, site: safeSite }
   if (description) frontmatter.description = description
   if (navOrder !== undefined) frontmatter.navOrder = navOrder
   if (hero !== undefined) frontmatter.hero = hero
@@ -18,8 +23,6 @@ export default defineEventHandler(async (event) => {
   const frontmatterStr = Object.entries(frontmatter)
     .map(([k, v]) => `${k}: ${typeof v === 'string' ? `'${v.replace(/'/g, "\\'")}'` : v}`)
     .join('\n')
-
-  const fullPath = join(process.cwd(), 'content', 'sites', site, 'pages', contentPath.replace(/^\//, ''))
 
   // Ensure directory exists
   await mkdir(dirname(fullPath), { recursive: true })

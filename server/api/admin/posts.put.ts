@@ -1,5 +1,6 @@
 import { writeFile } from 'fs/promises'
-import { join } from 'path'
+import { join, dirname } from 'path'
+import { safeJoin } from '~/server/utils/path-security'
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
@@ -32,8 +33,12 @@ export default defineEventHandler(async (event) => {
   frontmatterLines.push('---')
 
   // contentPath is like /sites/cima/posts/my-post
+  const baseDir = join(process.cwd(), 'content')
   const relativePath = contentPath.replace(/^\//, '')
-  const fullPath = join(process.cwd(), 'content', `${relativePath}.md`)
+  const fullPath = safeJoin(baseDir, `${relativePath}.md`)
+
+  // Ensure directory exists
+  await mkdir(dirname(fullPath), { recursive: true })
 
   const content = `${frontmatterLines.join('\n')}\n\n${markdownBody || ''}\n`
 
